@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c78n0yfbk1p4q"]
+
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_fw8re"]
+[ext_resource type="Script" uid="uid://dnr14uiyajquj" path="res://scripts/battle_logic.gd" id="1_r5l0u"]
+[ext_resource type="Script" uid="uid://bme11j2i2ndyn" path="res://scripts/end_turn_button.gd" id="2_gf131"]
+[ext_resource type="Script" uid="uid://c4jtsd8b6ntsy" path="res://energy_display.gd" id="3_sl17i"]
+[ext_resource type="PackedScene" uid="uid://ck6ewcnl8sg60" path="res://enemies/john_the_fraud.tscn" id="4_5joda"]
+
+[node name="tutorial" type="Node2D" unique_id=1916832371]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=89355144]
+
+[node name="cards" type="Control" parent="UI" unique_id=901797189]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="end_turn_button" type="Button" parent="UI" unique_id=1552152923]
+offset_left = 1090.0
+offset_top = 506.0
+offset_right = 1256.0
+offset_bottom = 701.0
+pivot_offset = Vector2(-583, 97)
+text = "end turn"
+script = ExtResource("2_gf131")
+
+[node name="energy_display" type="Label" parent="UI" unique_id=1700585432]
+offset_left = 85.0
+offset_top = 29.0
+offset_right = 368.0
+offset_bottom = 106.0
+script = ExtResource("3_sl17i")
+
+[node name="BattleLogic" type="Node" parent="." unique_id=1136221329]
+script = ExtResource("1_r5l0u")
+total_enemies = 3
+
+[node name="player" parent="." unique_id=294404824 instance=ExtResource("1_fw8re")]
+position = Vector2(192, 400)
+
+[node name="enemies" type="Node2D" parent="." unique_id=1413379743]
+position = Vector2(835, 394)
+
+[node name="John_the_fraud" parent="enemies" unique_id=708042470 instance=ExtResource("4_5joda")]
+position = Vector2(-81, 0)
+id = 1
+setted_speed = 20.0
+
+[node name="John_the_fraud2" parent="enemies" unique_id=159003369 instance=ExtResource("4_5joda")]
+position = Vector2(122, -2)
+id = 2
+setted_HP = 200.0
+setted_speed = 20.0
+
+[node name="John_the_fraud3" parent="enemies" unique_id=1014597192 instance=ExtResource("4_5joda")]
+position = Vector2(317, -3)
+id = 3
+setted_HP = 100.0
+setted_speed = 20.0
+
+[node name="background" type="Sprite2D" parent="." unique_id=1824490579]
+
+[connection signal="button_down" from="UI/end_turn_button" to="UI/end_turn_button" method="_on_button_down"]

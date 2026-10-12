@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ck7l3mylwuode"]
+
+[ext_resource type="Script" uid="uid://d3thlxt58hqqw" path="res://scenes/music_room_button.gd" id="1_nvwdo"]
+
+[node name="Button" type="Button" unique_id=1620311084]
+custom_minimum_size = Vector2(0, 80)
+theme_override_font_sizes/font_size = 40
+text = "Main Menu"
+script = ExtResource("1_nvwdo")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

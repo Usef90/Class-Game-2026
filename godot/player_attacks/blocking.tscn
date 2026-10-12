@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cdcce5ajsg6bw"]
+
+[ext_resource type="Script" uid="uid://b1wwgji6jiwrq" path="res://cards.gd" id="1_18cxb"]
+[ext_resource type="Texture2D" uid="uid://qju8bivensgw" path="res://Art/CardTemplateTuff.png" id="1_aqvf3"]
+[ext_resource type="Texture2D" uid="uid://bo3jxtcq4ajj5" path="res://Art/Block(NoCard).png" id="3_lux7k"]
+
+[node name="blocking" type="TextureRect" unique_id=580682133]
+offset_left = -68.0
+offset_top = -109.00001
+offset_right = 182.0
+offset_bottom = 241.0
+scale = Vector2(0.55999964, 0.55999964)
+texture = ExtResource("1_aqvf3")
+script = ExtResource("1_18cxb")
+card_name = "blocking"
+discription = "protect 25% of 
+incoming damage"
+damage = 0.0
+energy = 3.0
+effects = Array[String](["blocking"])
+AOE = true
+
+[node name="name2" type="Label" parent="." unique_id=1495939121]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 29.0
+offset_right = 287.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 21
+text = "BLOCK"
+
+[node name="Sprite2D2" type="TextureRect" parent="." unique_id=2146445910]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 2.0
+offset_right = 247.0
+offset_bottom = 352.0
+texture = ExtResource("3_lux7k")
+
+[node name="discription2" type="Label" parent="." unique_id=608653589]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 188.0
+offset_right = 228.0
+offset_bottom = 306.0
+text = "protect 25% of 
+incoming damage"
+
+[node name="Label" type="Label" parent="." unique_id=908153971]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -9.0
+offset_right = 207.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 40
+text = "3
+"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://62lcsabllf16"]
+
+[ext_resource type="Script" uid="uid://currldxd28o8y" path="res://credits.gd" id="1_2ckv8"]
+[ext_resource type="Texture2D" uid="uid://pm4p88xs71w1" path="res://Art/cooking.png" id="2_2ckv8"]
+
+[node name="credits" type="Node2D" unique_id=789137669]
+script = ExtResource("1_2ckv8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=658811272]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1441803114]
+modulate = Color(0.557753, 0.5577531, 0.5577531, 1)
+offset_top = 2.0
+offset_right = 1293.6205
+offset_bottom = 720.0
+texture = ExtResource("2_2ckv8")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=1713355696]
+offset_left = 41.0
+offset_top = 11.0
+offset_right = 227.0
+offset_bottom = 85.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "credits"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer" unique_id=332627261]
+offset_left = 29.0
+offset_top = 89.0
+offset_right = 704.0
+offset_bottom = 573.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "programming: Me67, IssacGlazer(gemini)
+pixel art: Me67, IssacGlazer
+Vector art: Me67
+Music: Me67
+particle effect: IssacGlazer
+"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="CanvasLayer" unique_id=1140351968]
+offset_left = 711.0
+offset_top = 89.0
+offset_right = 1286.0
+offset_bottom = 573.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Godot, Piskel, pixelorama, Krita,
+Musescore, Audacity"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer" unique_id=1972932607]
+offset_left = 747.0
+offset_top = 14.0
+offset_right = 1254.0
+offset_bottom = 97.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Stuff used
+"
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1675638106]
+offset_left = 46.0
+offset_top = 618.0
+offset_right = 192.0
+offset_bottom = 690.0
+text = "Go back"
+
+[connection signal="button_down" from="CanvasLayer/Button" to="." method="_on_button_button_down"]

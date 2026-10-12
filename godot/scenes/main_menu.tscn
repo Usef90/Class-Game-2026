@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://b0k5838nc0vb5"]
+
+[ext_resource type="Texture2D" uid="uid://fljhhb8q5smd" path="res://Art/gordoTitleScreen.png" id="2_bqqt6"]
+[ext_resource type="Script" uid="uid://b6udiq5bu4apv" path="res://scenes/button.gd" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://c6bc7db3tdg4d" path="res://Art/title.png" id="3_8ln24"]
+[ext_resource type="StyleBox" uid="uid://dvrqw8rhluaai" path="res://level_buttons.tres" id="3_wu84c"]
+[ext_resource type="StyleBox" uid="uid://bjncy0blgwv8n" path="res://hover.tres" id="4_8ln24"]
+
+[node name="main_menu" type="Node2D" unique_id=2012640209]
+script = ExtResource("2_ekxnf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=550524115]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1407863908]
+offset_top = 2.0
+offset_right = 1293.6205
+offset_bottom = 720.0
+texture = ExtResource("2_bqqt6")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=1639429048]
+offset_left = -135.0
+offset_top = -26.0
+offset_right = 1585.4818
+offset_bottom = 798.0963
+scale = Vector2(0.415, 0.415)
+texture = ExtResource("3_8ln24")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=507507939]
+offset_left = -1027.0
+offset_top = -20.0
+offset_right = -34.0
+offset_bottom = 156.0
+theme_override_colors/default_color = Color(0.13863948, 0.16680756, 0.2997063, 1)
+theme_override_font_sizes/normal_font_size = 125
+text = "Kurger buns"
+
+[node name="continue" type="Button" parent="CanvasLayer" unique_id=883469284]
+offset_left = 58.0
+offset_top = 421.0
+offset_right = 445.8069
+offset_bottom = 493.0
+theme_override_styles/normal = ExtResource("3_wu84c")
+theme_override_styles/pressed = ExtResource("4_8ln24")
+theme_override_styles/hover = ExtResource("4_8ln24")
+text = "Continue"
+
+[node name="new game" type="Button" parent="CanvasLayer" unique_id=151820136]
+offset_left = 59.0
+offset_top = 322.0
+offset_right = 446.8069
+offset_bottom = 394.0
+theme_override_styles/normal = ExtResource("3_wu84c")
+theme_override_styles/pressed = ExtResource("4_8ln24")
+theme_override_styles/hover = ExtResource("4_8ln24")
+text = "New game"
+
+[node name="achievements" type="Button" parent="CanvasLayer" unique_id=869793619]
+offset_left = 1116.0
+offset_top = 618.0
+offset_right = 1252.8069
+offset_bottom = 690.0
+theme_override_styles/normal = ExtResource("3_wu84c")
+theme_override_styles/pressed = ExtResource("4_8ln24")
+theme_override_styles/hover = ExtResource("4_8ln24")
+text = "Achievements"
+
+[node name="Button2" type="Button" parent="CanvasLayer" unique_id=1997134882]
+offset_left = 59.0
+offset_top = 518.0
+offset_right = 446.8069
+offset_bottom = 590.0
+theme_override_styles/normal = ExtResource("3_wu84c")
+theme_override_styles/pressed = ExtResource("4_8ln24")
+theme_override_styles/hover = ExtResource("4_8ln24")
+text = "Credits Real"
+
+[node name="Button3" type="Button" parent="CanvasLayer" unique_id=2024521351]
+offset_left = 57.0
+offset_top = 614.0
+offset_right = 444.8069
+offset_bottom = 686.0
+theme_override_styles/normal = ExtResource("3_wu84c")
+theme_override_styles/pressed = ExtResource("4_8ln24")
+theme_override_styles/hover = ExtResource("4_8ln24")
+text = "Music Room"
+
+[node name="Timer" type="Timer" parent="." unique_id=242307133]
+wait_time = 9.0
+autostart = true
+
+[connection signal="pressed" from="CanvasLayer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="CanvasLayer/new game" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/achievements" to="." method="_on_achievements_pressed"]
+[connection signal="button_down" from="CanvasLayer/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="CanvasLayer/Button3" to="." method="_on_button_3_button_down"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

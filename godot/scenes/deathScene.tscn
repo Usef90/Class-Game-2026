@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c8bs5yed7bmyq"]
+
+[ext_resource type="Script" uid="uid://dvkgmnjqv64ix" path="res://scenes/death_scene.gd" id="1_3cgnp"]
+[ext_resource type="FontFile" uid="uid://11stbrnoqjdc" path="res://fonts/montreal/Montreal-Bold.ttf" id="2_6x607"]
+[ext_resource type="FontFile" uid="uid://b4op6rjwgpx25" path="res://fonts/kirifont/KiriFont.otf" id="3_2sc5i"]
+[ext_resource type="StyleBox" uid="uid://dk0m455vrnwhn" path="res://cool_colours.tres" id="4_ynk1p"]
+[ext_resource type="StyleBox" uid="uid://bjncy0blgwv8n" path="res://hover.tres" id="5_u2qis"]
+
+[node name="deathScene" type="Node2D" unique_id=795378392]
+script = ExtResource("1_3cgnp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=416492296]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=36602788]
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 1317.0
+offset_bottom = 753.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=1214383934]
+offset_left = 500.0
+offset_top = 34.0
+offset_right = 753.0
+offset_bottom = 210.0
+theme_override_colors/default_color = Color(0.18717614, 0.18717614, 0.18717614, 1)
+theme_override_fonts/normal_font = ExtResource("2_6x607")
+theme_override_font_sizes/normal_font_size = 100
+text = "DIED"
+
+[node name="TextureButton" type="Button" parent="CanvasLayer" unique_id=2092368256]
+offset_left = 410.0
+offset_top = 357.0
+offset_right = 828.0
+offset_bottom = 485.0
+theme_override_fonts/font = ExtResource("3_2sc5i")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = ExtResource("4_ynk1p")
+theme_override_styles/pressed = ExtResource("5_u2qis")
+theme_override_styles/hover = ExtResource("5_u2qis")
+text = "Main Menu"
+
+[connection signal="button_down" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_button_down"]

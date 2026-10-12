@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cbmack1jtl2q8"]
+
+[ext_resource type="Script" uid="uid://d4c12ggebe1bf" path="res://effects/effects.gd" id="1_710si"]
+
+[node name="poison" type="Node" unique_id=742750699]
+script = ExtResource("1_710si")
+startInstantly = true
+effect_name = "poison"
+damage = 3.0
+discription = "does 3 damage over 5 turns"

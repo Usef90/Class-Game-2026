@@ -1,0 +1,271 @@
+[gd_scene format=3 uid="uid://dwav05vq47c6p"]
+
+[ext_resource type="Script" uid="uid://cnyt6r7yt1h8j" path="res://scripts/level_select.gd" id="1_3shnc"]
+[ext_resource type="Texture2D" uid="uid://bpp8nf463r3ow" path="res://Art/burger buns.png" id="2_p0wlc"]
+[ext_resource type="Texture2D" uid="uid://cbqxcphym0tnu" path="res://Art/cool.png" id="3_2epne"]
+[ext_resource type="StyleBox" uid="uid://dvrqw8rhluaai" path="res://level_buttons.tres" id="3_r77uv"]
+[ext_resource type="FontFile" uid="uid://b4op6rjwgpx25" path="res://fonts/kirifont/KiriFont.otf" id="4_7plkq"]
+[ext_resource type="StyleBox" uid="uid://bjncy0blgwv8n" path="res://hover.tres" id="5_4nqmc"]
+[ext_resource type="StyleBox" uid="uid://dk0m455vrnwhn" path="res://cool_colours.tres" id="6_r77uv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nqmc"]
+bg_color = Color(0.38431373, 0.65882355, 0.6039216, 1)
+border_width_left = 9
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 9
+corner_detail = 20
+
+[node name="LevelSelect" type="Control" unique_id=867965322]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3shnc")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=897612403]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 7301.0
+offset_bottom = 719.0
+texture = ExtResource("3_2epne")
+
+[node name="Panel" type="Panel" parent="." unique_id=1776413840]
+layout_mode = 0
+offset_top = 402.0
+offset_right = 1278.0
+offset_bottom = 718.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4nqmc")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1131155159]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 21.0
+offset_right = 914.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("4_7plkq")
+theme_override_font_sizes/font_size = 30
+text = "test"
+autowrap_mode = 3
+
+[node name="TopScrollContainer" type="ScrollContainer" parent="." unique_id=861332106]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 84.0
+grow_horizontal = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopScrollContainer" unique_id=514409502]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Tutorial" type="Button" parent="TopScrollContainer/HBoxContainer" unique_id=300834043]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("3_r77uv")
+theme_override_styles/hover = ExtResource("3_r77uv")
+text = "Tutorial"
+
+[node name="Level_1" type="Button" parent="TopScrollContainer/HBoxContainer" unique_id=1987508733]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("3_r77uv")
+theme_override_styles/hover = ExtResource("3_r77uv")
+text = "Level 1"
+
+[node name="Level_2" type="Button" parent="TopScrollContainer/HBoxContainer" unique_id=730252866]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("3_r77uv")
+theme_override_styles/hover = ExtResource("3_r77uv")
+text = "Level 2
+"
+
+[node name="Level_3" type="Button" parent="TopScrollContainer/HBoxContainer" unique_id=457798675]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("3_r77uv")
+theme_override_styles/hover = ExtResource("3_r77uv")
+text = "Level 3
+"
+
+[node name="Level_4" type="Button" parent="TopScrollContainer/HBoxContainer" unique_id=1004589234]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("3_r77uv")
+theme_override_styles/hover = ExtResource("3_r77uv")
+text = "Level 4
+"
+
+[node name="Level_5" type="Button" parent="TopScrollContainer/HBoxContainer" unique_id=1244864332]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("3_r77uv")
+theme_override_styles/hover = ExtResource("3_r77uv")
+text = "Level 5
+"
+
+[node name="Level_6" type="Button" parent="TopScrollContainer/HBoxContainer" unique_id=2002289865]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("3_r77uv")
+theme_override_styles/hover = ExtResource("3_r77uv")
+text = "Level 6
+"
+
+[node name="Level_7" type="Button" parent="TopScrollContainer/HBoxContainer" unique_id=2123252438]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("3_r77uv")
+theme_override_styles/hover = ExtResource("3_r77uv")
+text = "Level 7
+"
+
+[node name="Level_8" type="Button" parent="TopScrollContainer/HBoxContainer" unique_id=939004353]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("3_r77uv")
+theme_override_styles/hover = ExtResource("3_r77uv")
+text = "Level 8
+"
+
+[node name="Level_9" type="Button" parent="TopScrollContainer/HBoxContainer" unique_id=416532083]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("3_r77uv")
+theme_override_styles/hover = ExtResource("3_r77uv")
+text = "Level 9
+"
+
+[node name="Level_10" type="Button" parent="TopScrollContainer/HBoxContainer" unique_id=1004976711]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("3_r77uv")
+theme_override_styles/hover = ExtResource("3_r77uv")
+text = "Level 10
+"
+
+[node name="MapScrollContainer" type="ScrollContainer" parent="." unique_id=1910810919]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 142.0
+offset_right = 1283.0
+offset_bottom = 739.0
+
+[node name="Control" type="Control" parent="MapScrollContainer" unique_id=1690691]
+custom_minimum_size = Vector2(4000, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MapScrollContainer/Control" unique_id=601097119]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 138.0
+offset_right = 202.0
+offset_bottom = 266.0
+mouse_filter = 2
+texture = ExtResource("2_p0wlc")
+
+[node name="LeftButton" type="Button" parent="." unique_id=146044230]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 181.0
+offset_right = 448.0
+offset_bottom = 245.0
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("5_4nqmc")
+theme_override_styles/pressed_mirrored = ExtResource("5_4nqmc")
+theme_override_styles/hover = ExtResource("5_4nqmc")
+text = "<"
+
+[node name="RightButton" type="Button" parent="." unique_id=1661235842]
+layout_mode = 0
+offset_left = 833.0
+offset_top = 184.0
+offset_right = 937.0
+offset_bottom = 248.0
+theme_override_styles/normal = ExtResource("3_r77uv")
+theme_override_styles/pressed = ExtResource("5_4nqmc")
+theme_override_styles/pressed_mirrored = ExtResource("5_4nqmc")
+theme_override_styles/hover = ExtResource("5_4nqmc")
+text = ">"
+
+[node name="PlayButton" type="Button" parent="." unique_id=594574671]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 418.0
+offset_right = 1258.0
+offset_bottom = 497.0
+theme_override_styles/normal = ExtResource("6_r77uv")
+theme_override_styles/pressed = ExtResource("5_4nqmc")
+theme_override_styles/hover = ExtResource("5_4nqmc")
+text = "Play"
+
+[node name="shop" type="Button" parent="." unique_id=1866208742]
+layout_mode = 0
+offset_left = 935.0
+offset_top = 520.0
+offset_right = 1260.0
+offset_bottom = 612.0
+theme_override_styles/normal = ExtResource("6_r77uv")
+theme_override_styles/pressed = ExtResource("5_4nqmc")
+theme_override_styles/hover = ExtResource("5_4nqmc")
+text = "Shop"
+
+[node name="go back button" type="Button" parent="." unique_id=1381075873]
+layout_mode = 0
+offset_left = 1154.0
+offset_top = 638.0
+offset_right = 1259.8654
+offset_bottom = 701.0
+theme_override_styles/normal = ExtResource("6_r77uv")
+theme_override_styles/pressed = ExtResource("5_4nqmc")
+theme_override_styles/hover = ExtResource("5_4nqmc")
+text = "Menu"
+
+[node name="LevelInfoPanel" type="Control" parent="." unique_id=450355882]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EnemyIcon" type="TextureRect" parent="LevelInfoPanel" unique_id=699754381]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StageTitle" type="Label" parent="LevelInfoPanel" unique_id=1121912969]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="shop" to="." method="_on_shop_pressed"]
+[connection signal="button_down" from="go back button" to="." method="_on_go_back_button_button_down"]

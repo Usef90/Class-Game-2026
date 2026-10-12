@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://dcerwyte66fm0"]
+
+[ext_resource type="Texture2D" uid="uid://qaevsvfcf314" path="res://Art/durian plantation.png" id="1_tcm4h"]
+[ext_resource type="PackedScene" uid="uid://drr3088qvw5dk" path="res://ui.tscn" id="2_tcm4h"]
+[ext_resource type="Script" uid="uid://dnr14uiyajquj" path="res://scripts/battle_logic.gd" id="3_6kh1l"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="4_fyow1"]
+[ext_resource type="PackedScene" uid="uid://ck6ewcnl8sg60" path="res://enemies/enemy.tscn" id="5_jae5d"]
+[ext_resource type="AudioStream" uid="uid://61nm7dskgc3f" path="res://sfx/goodmorningChina.wav" id="6_6kh1l"]
+[ext_resource type="Texture2D" uid="uid://dwbcw4yteuw7q" path="res://Art/zemonketest.png" id="6_tcm4h"]
+[ext_resource type="Script" uid="uid://cpukq3r6546by" path="res://dialogue_manger.gd" id="7_2sg40"]
+[ext_resource type="Script" uid="uid://buclel82cppmv" path="res://scripts/dialogue_entry.gd" id="8_fdkgc"]
+[ext_resource type="Texture2D" uid="uid://ckmir275cyots" path="res://Art/gordoRAM.png" id="9_1ybjt"]
+[ext_resource type="Texture2D" uid="uid://bfosxkvv6nha1" path="res://Art/zemonke.png" id="9_tcm4h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6kh1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_tcm4h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_jw067"]
+script = ExtResource("8_fdkgc")
+character_name = "ZeMonke"
+portrait = ExtResource("9_tcm4h")
+paragraphs = "Fun fact: Banana are yellow because they are."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_6j6yj"]
+script = ExtResource("8_fdkgc")
+character_name = "Gordo RamE"
+portrait = ExtResource("9_1ybjt")
+paragraphs = "...."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_pin3j"]
+script = ExtResource("8_fdkgc")
+character_name = "Gordo RamE"
+portrait = ExtResource("9_1ybjt")
+paragraphs = "I suppose chap"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_n5ufe"]
+script = ExtResource("8_fdkgc")
+character_name = "Zemonke"
+portrait = ExtResource("9_tcm4h")
+paragraphs = "Oh come on. I thought of this fact all day."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_tcm4h"]
+script = ExtResource("8_fdkgc")
+character_name = "Gordo RamE"
+portrait = ExtResource("9_1ybjt")
+paragraphs = "Mate, we can not be real that joke was utterly rubbish."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_6kh1l"]
+script = ExtResource("8_fdkgc")
+character_name = "Zemonke"
+portrait = ExtResource("9_tcm4h")
+paragraphs = "Well, you wanna see the Super giga ultra mega giga again banananananana nuke.
+It one shot almost anything"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_fyow1"]
+script = ExtResource("8_fdkgc")
+character_name = "Gordo RamE"
+portrait = ExtResource("9_1ybjt")
+paragraphs = "Who decided to add this move to the game. Kurger Buns I am of here if the nuke lands."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_2sg40"]
+script = ExtResource("8_fdkgc")
+character_name = "Zemonke"
+portrait = ExtResource("9_tcm4h")
+paragraphs = "Bad news."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_fdkgc"]
+script = ExtResource("8_fdkgc")
+character_name = "Zemonke"
+portrait = ExtResource("9_tcm4h")
+paragraphs = "They said it will come at around 10 turns."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_1ybjt"]
+script = ExtResource("8_fdkgc")
+character_name = "Zemonke"
+portrait = ExtResource("9_tcm4h")
+paragraphs = "I think I gotta lock in now. You made me very angry."
+music = "BananaLoreRemix"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_jae5d"]
+script = ExtResource("8_fdkgc")
+character_name = "Zemonke"
+portrait = ExtResource("9_tcm4h")
+paragraphs = "You ready for the Super giga ultra mega giga again banananananana nuke?"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_w4m1c"]
+script = ExtResource("8_fdkgc")
+character_name = "Gordo RamE"
+portrait = ExtResource("9_1ybjt")
+paragraphs = "Wait you ought to kill him now."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[node name="zemonke" type="Node2D" unique_id=1916832371]
+
+[node name="background" type="Sprite2D" parent="." unique_id=1824490579]
+position = Vector2(640.2222, 360.25003)
+scale = Vector2(1.998611, 1.9986111)
+texture = ExtResource("1_tcm4h")
+
+[node name="UI" parent="." unique_id=890284133 instance=ExtResource("2_tcm4h")]
+
+[node name="BattleLogic" type="Node" parent="." unique_id=1136221329]
+script = ExtResource("3_6kh1l")
+music_name = "zemonke"
+total_enemies = 3
+victory_gold = 30
+achievement_will_gain = "Rack"
+
+[node name="player" parent="." unique_id=294404824 instance=ExtResource("4_fyow1")]
+position = Vector2(136, 377)
+
+[node name="enemies" type="Node2D" parent="." unique_id=1413379743]
+position = Vector2(969, 315)
+
+[node name="ZeMonke" parent="enemies" unique_id=708042470 instance=ExtResource("5_jae5d")]
+position = Vector2(162, 57)
+enemy_dying = ExtResource("6_6kh1l")
+attacks_name = Array[String](["guess_what", "chicken", "butt", "guess_what", "butt", "guess_what", "chicken", "butt", "every_last_banana", "serious_chicken", "lock_in", "serious_chicken", "lock_in", "guess_what", "banana_nuke"])
+setted_HP = 800.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemies/ZeMonke" unique_id=1450351235]
+position = Vector2(12.999998, -24.000002)
+scale = Vector2(2.8749988, 2.8749988)
+sprite_frames = SubResource("SpriteFrames_6kh1l")
+
+[node name="Dialogue" type="Node" parent="." unique_id=276630500]
+script = ExtResource("7_2sg40")
+at_when = 1
+dialogues = Array[ExtResource("8_fdkgc")]([SubResource("Resource_jw067"), SubResource("Resource_6j6yj"), SubResource("Resource_pin3j"), SubResource("Resource_n5ufe"), SubResource("Resource_tcm4h"), SubResource("Resource_6kh1l"), SubResource("Resource_fyow1")])
+
+[node name="Dialogue3" type="Node" parent="." unique_id=707145313]
+script = ExtResource("7_2sg40")
+at_when = 2
+dialogues = Array[ExtResource("8_fdkgc")]([SubResource("Resource_2sg40"), SubResource("Resource_fdkgc")])
+
+[node name="Dialogue5" type="Node" parent="." unique_id=1394487316]
+script = ExtResource("7_2sg40")
+at_when = 8
+dialogues = Array[ExtResource("8_fdkgc")]([SubResource("Resource_1ybjt")])
+
+[node name="Dialogue2" type="Node" parent="." unique_id=521808174]
+script = ExtResource("7_2sg40")
+at_when = 15
+dialogues = Array[ExtResource("8_fdkgc")]([SubResource("Resource_jae5d"), SubResource("Resource_w4m1c")])

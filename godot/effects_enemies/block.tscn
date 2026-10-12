@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://e1t7swlpf6n4"]
+
+[ext_resource type="Script" uid="uid://djpecrs2843jt" path="res://effects_enemies/effect_enemies.gd" id="1_i43b2"]
+
+[node name="block" type="Node" unique_id=289820757]
+script = ExtResource("1_i43b2")
+effect_name = "block"
+type = "buff"
+target_stats = "def"
+duration = 3
+Effect_strength = 0.5
+discription = "block 50% incoming attacks"

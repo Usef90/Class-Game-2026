@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dowxhtjim58nl"
+path="res://.godot/imported/It's Not Like I Like You!! ().mp3-7179c1f7355eb85c966bd6d874766ccd.mp3str"
+
+[deps]
+
+source_file="res://minigames/black_flash/It's Not Like I Like You!! ().mp3"
+dest_files=["res://.godot/imported/It's Not Like I Like You!! ().mp3-7179c1f7355eb85c966bd6d874766ccd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

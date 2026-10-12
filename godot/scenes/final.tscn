@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://dy0fvo4kx1jct"]
+
+[ext_resource type="Texture2D" uid="uid://3wdtby4j21u4" path="res://Art/backgroundlevel1.png" id="1_vf3a0"]
+[ext_resource type="PackedScene" uid="uid://drr3088qvw5dk" path="res://ui.tscn" id="2_30t23"]
+[ext_resource type="Script" uid="uid://dnr14uiyajquj" path="res://scripts/battle_logic.gd" id="3_6b1qv"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="4_1rxmq"]
+[ext_resource type="PackedScene" uid="uid://ck6ewcnl8sg60" path="res://enemies/enemy.tscn" id="5_6b7v6"]
+[ext_resource type="Texture2D" uid="uid://cct5nq8x5uixe" path="res://Art/mangoMusturd67.png" id="6_vf3a0"]
+[ext_resource type="Script" uid="uid://cpukq3r6546by" path="res://dialogue_manger.gd" id="7_1wbyy"]
+[ext_resource type="Script" uid="uid://buclel82cppmv" path="res://scripts/dialogue_entry.gd" id="8_32mrs"]
+[ext_resource type="Texture2D" uid="uid://b446s01wby3up" path="res://Art/anime girl ig.png" id="9_xxe6l"]
+[ext_resource type="Texture2D" uid="uid://ckmir275cyots" path="res://Art/gordoRAM.png" id="10_ju3dn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_30t23"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_vf3a0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_vf3a0"]
+script = ExtResource("8_32mrs")
+character_name = "Dr Mango123"
+portrait = ExtResource("9_xxe6l")
+paragraphs = "Where did everybody go?"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_30t23"]
+script = ExtResource("8_32mrs")
+character_name = "Gordo RamE"
+portrait = ExtResource("10_ju3dn")
+paragraphs = "We butchered them since they called me fat."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_6b1qv"]
+script = ExtResource("8_32mrs")
+character_name = "Dr Mango123"
+portrait = ExtResource("9_xxe6l")
+paragraphs = "So you wiped out an entire town just because they called you fat."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_1rxmq"]
+script = ExtResource("8_32mrs")
+character_name = "Gordo RamE"
+portrait = ExtResource("10_ju3dn")
+paragraphs = "Yeah. So what bring you here"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_6b7v6"]
+script = ExtResource("8_32mrs")
+character_name = "Dr Mango123"
+portrait = ExtResource("9_xxe6l")
+paragraphs = "Can I have the burger guy?
+We have something special for it.
+
+A burger bun
+"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_1wbyy"]
+script = ExtResource("8_32mrs")
+character_name = "Dr Mango123"
+portrait = ExtResource("9_xxe6l")
+paragraphs = "But since I am literally homeless and in debt. I am charging 100 pound for it."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_msjty"]
+script = ExtResource("8_32mrs")
+character_name = "Gordo RamE"
+portrait = ExtResource("10_ju3dn")
+paragraphs = "Honestly how did that me67 guy steal our money even after we kill him. You know what we're robbing you."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[node name="mango" type="Node2D" unique_id=1916832371]
+
+[node name="background2" type="Sprite2D" parent="." unique_id=1796574471]
+position = Vector2(638, 364)
+scale = Vector2(2.0218751, 2.0218751)
+texture = ExtResource("1_vf3a0")
+
+[node name="UI" parent="." unique_id=890284133 instance=ExtResource("2_30t23")]
+
+[node name="BattleLogic" type="Node" parent="." unique_id=1136221329]
+script = ExtResource("3_6b1qv")
+music_name = "FinalBossPleaseGiveInput"
+ending_of_story = true
+achievement_will_gain = "mango"
+
+[node name="player" parent="." unique_id=294404824 instance=ExtResource("4_1rxmq")]
+position = Vector2(232, 291)
+
+[node name="enemies" type="Node2D" parent="." unique_id=1413379743]
+position = Vector2(835, 394)
+
+[node name="Mango Mustard" parent="enemies" unique_id=708042470 instance=ExtResource("5_6b7v6")]
+position = Vector2(126, -92)
+attacks_name = Array[String](["evil_scientist_attack", "punch", "flat_earth", "kick", "nuclear_pizza"])
+setted_HP = 1000.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemies/Mango Mustard" unique_id=1450351235]
+position = Vector2(14, -24)
+rotation = -0.005377153
+scale = Vector2(1.46875, 1.46875)
+sprite_frames = SubResource("SpriteFrames_30t23")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1824490579]
+
+[node name="Dialogue" type="Node" parent="." unique_id=276630500]
+script = ExtResource("7_1wbyy")
+at_when = 1
+dialogues = Array[ExtResource("8_32mrs")]([SubResource("Resource_vf3a0"), SubResource("Resource_30t23"), SubResource("Resource_6b1qv"), SubResource("Resource_1rxmq"), SubResource("Resource_6b7v6"), SubResource("Resource_1wbyy"), SubResource("Resource_msjty")])

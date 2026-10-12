@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ck6ewcnl8sg60"]
+
+[ext_resource type="Script" uid="uid://c4kqr3abi6wjh" path="res://scripts/enemy.gd" id="1_2sr7e"]
+[ext_resource type="AudioStream" uid="uid://cubqq5ioomlgc" path="res://sfx/enemydying.wav" id="2_a6vjd"]
+[ext_resource type="PackedScene" uid="uid://bkiarse6ln4qp" path="res://enemy_stats.tscn" id="3_4ytir"]
+[ext_resource type="Script" uid="uid://c6buq5wvbn5nx" path="res://scripts/status.gd" id="3_orwns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ytir"]
+size = Vector2(221, 206.5)
+
+[node name="enemy" type="Node2D" unique_id=708042470]
+script = ExtResource("1_2sr7e")
+enemy_dying = ExtResource("2_a6vjd")
+attacks_name = Array[String](["kick", "punch", "poison"])
+
+[node name="enemy_stats" parent="." unique_id=1287744910 instance=ExtResource("3_4ytir")]
+
+[node name="touch_area" type="Area2D" parent="." unique_id=65239337]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="touch_area" unique_id=411885420]
+position = Vector2(4.5, -21.75)
+shape = SubResource("RectangleShape2D_4ytir")
+
+[node name="status" type="Node" parent="." unique_id=352096447]
+script = ExtResource("3_orwns")
+
+[node name="status_effect_viewer" type="HFlowContainer" parent="." unique_id=292000366]
+offset_left = -62.0
+offset_top = 102.0
+offset_right = 93.0
+offset_bottom = 173.0
+size_flags_stretch_ratio = 2.0
+
+[connection signal="mouse_entered" from="touch_area" to="." method="_on_area_2d_mouse_entered"]

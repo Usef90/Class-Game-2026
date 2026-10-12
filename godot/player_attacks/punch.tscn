@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://c2tfvqo788kxy"]
+
+[ext_resource type="Texture2D" uid="uid://qju8bivensgw" path="res://Art/CardTemplateTuff.png" id="1_n7t67"]
+[ext_resource type="Script" uid="uid://b1wwgji6jiwrq" path="res://cards.gd" id="1_s8un3"]
+[ext_resource type="Texture2D" uid="uid://cpxn6730bypkt" path="res://Art/punch(no_card).png" id="3_p6ncr"]
+
+[node name="punch" type="TextureRect" unique_id=95620961]
+offset_left = -72.0
+offset_top = -103.0
+offset_right = 178.0
+offset_bottom = 247.0
+scale = Vector2(0.571, 0.571)
+texture = ExtResource("1_n7t67")
+script = ExtResource("1_s8un3")
+card_name = "Punch"
+discription = "do 10 damage"
+damage = 10.0
+energy = 5.0
+
+[node name="name" type="Label" parent="." unique_id=1387920143]
+layout_mode = 0
+offset_left = 90.35043
+offset_top = 28.0
+offset_right = 290.35046
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 21
+text = "Punch"
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=952963298]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 249.0
+offset_bottom = 351.0
+texture = ExtResource("3_p6ncr")
+
+[node name="discription" type="Label" parent="." unique_id=1296549410]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 187.0
+offset_right = 230.0
+offset_bottom = 305.0
+text = "do 10 damage"
+
+[node name="Label" type="Label" parent="." unique_id=196568748]
+layout_mode = 0
+offset_left = 8.547009
+offset_top = -6.8376093
+offset_right = 208.54701
+offset_bottom = 48.16239
+theme_override_font_sizes/font_size = 40
+text = "5"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

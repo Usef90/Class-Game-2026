@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dngabixq4uy1k"]
+
+[ext_resource type="Script" uid="uid://b4r0poj5clthn" path="res://Upgrades/upgrade_pack.gd" id="1_4a2yq"]
+[ext_resource type="Texture2D" uid="uid://dmuv2bdye6k5i" path="res://Art/CardPack.png" id="2_7ev1l"]
+
+[node name="UpgradePack" type="Control" unique_id=1634683499]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 150.0
+offset_bottom = 200.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_4a2yq")
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=787241409]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7ev1l")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameLabel" type="Label" parent="." unique_id=2096382299]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 150.0
+offset_right = 70.0
+offset_bottom = 173.0
+text = "Name"
+
+[node name="BuyButton" type="Button" parent="." unique_id=956547880]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 30.0
+offset_right = 122.0
+offset_bottom = 66.0
+
+[node name="PriceLabel" type="Label" parent="." unique_id=2062889375]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 33.0
+offset_right = 97.0
+offset_bottom = 82.0
+text = "Price
+"

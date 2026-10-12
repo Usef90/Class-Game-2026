@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://ppr0et1a5pn1"]
+
+[ext_resource type="Script" uid="uid://cd2hfdl70twre" path="res://audio_manager.gd" id="1_jisk1"]
+[ext_resource type="AudioStream" uid="uid://cn1x23oeojqdo" path="res://music/myRageBaitIsAbsolute.mp3" id="2_op7ad"]
+[ext_resource type="PackedScene" uid="uid://ceci4fhh0g2hb" path="res://audio_oneshot.tscn" id="2_wby2p"]
+[ext_resource type="AudioStream" uid="uid://chh4u4klcqyok" path="res://music/boss2(mango maybe).mp3" id="3_wby2p"]
+[ext_resource type="AudioStream" uid="uid://c0vpomtpohdty" path="res://music/finalBossPleaseGiveInput.mp3" id="4_14skr"]
+[ext_resource type="AudioStream" uid="uid://cshtg41bktenk" path="res://music/freeCandy.mp3" id="5_k4pvn"]
+[ext_resource type="AudioStream" uid="uid://c5nbfj6vrje4e" path="res://music/level select.mp3" id="8_86pii"]
+[ext_resource type="AudioStream" uid="uid://boerryrw1f2xi" path="res://music/mainMenu.mp3" id="8_mfnxe"]
+[ext_resource type="AudioStream" uid="uid://bengbmixyh3kw" path="res://music/mango67.mp3" id="9_astvc"]
+[ext_resource type="AudioStream" uid="uid://rftgm47uoqi6" path="res://music/mainMenuBetter.mp3" id="9_fckgx"]
+[ext_resource type="AudioStream" uid="uid://bupgnj4gaye7a" path="res://music/numb digger.mp3" id="10_ma34g"]
+[ext_resource type="AudioStream" uid="uid://bc371d365ctg5" path="res://music/untitled67.mp3" id="12_fckgx"]
+[ext_resource type="AudioStream" uid="uid://wwajtbbwqbhq" path="res://music/untitled something.mp3" id="13_86pii"]
+[ext_resource type="AudioStream" uid="uid://c7vj2vgjicj85" path="res://music/battleBetter.mp3" id="14_86pii"]
+[ext_resource type="AudioStream" uid="uid://hdn4evacflw6" path="res://music/jacob is gonna help igb.mp3" id="15_86pii"]
+[ext_resource type="AudioStream" uid="uid://dd6iborh6pwtd" path="res://music/Kevin.mp3" id="16_ma34g"]
+[ext_resource type="AudioStream" uid="uid://beiww2gpbnxll" path="res://music/dihTouchingMusic.mp3" id="17_hokuy"]
+[ext_resource type="AudioStream" uid="uid://dws0doqvxipay" path="res://music/It's worth the 5 bucks.mp3" id="18_alxyf"]
+[ext_resource type="AudioStream" uid="uid://dud1ty55ht1d6" path="res://music/banana_lore_remix.mp3" id="19_hokuy"]
+
+[node name="audio_manager" type="Node" unique_id=224815698 node_paths=PackedStringArray("music", "sfx")]
+script = ExtResource("1_jisk1")
+music = NodePath("music")
+sfx = NodePath("sfx")
+audio_one_scene = ExtResource("2_wby2p")
+
+[node name="music" type="Node" parent="." unique_id=1244756397]
+
+[node name="Boss1" type="AudioStreamPlayer" parent="music" unique_id=1244224550]
+stream = ExtResource("2_op7ad")
+
+[node name="Boss2(mangoMaybe)" type="AudioStreamPlayer" parent="music" unique_id=1881549085]
+stream = ExtResource("3_wby2p")
+
+[node name="FinalBossPleaseGiveInput" type="AudioStreamPlayer" parent="music" unique_id=994352068]
+stream = ExtResource("4_14skr")
+
+[node name="FreeCandy" type="AudioStreamPlayer" parent="music" unique_id=1116581445]
+stream = ExtResource("5_k4pvn")
+
+[node name="Lastminutechange" type="AudioStreamPlayer" parent="music" unique_id=2061703545]
+stream = ExtResource("3_wby2p")
+volume_db = -3.792
+
+[node name="LevelSelect" type="AudioStreamPlayer" parent="music" unique_id=1200959558]
+stream = ExtResource("8_86pii")
+
+[node name="MainMenu" type="AudioStreamPlayer" parent="music" unique_id=651430141]
+stream = ExtResource("9_fckgx")
+
+[node name="Mango67" type="AudioStreamPlayer" parent="music" unique_id=358705237]
+stream = ExtResource("9_astvc")
+
+[node name="NumbDigger" type="AudioStreamPlayer" parent="music" unique_id=1849837290]
+stream = ExtResource("10_ma34g")
+
+[node name="Untitled67" type="AudioStreamPlayer" parent="music" unique_id=1575546725]
+stream = ExtResource("12_fckgx")
+
+[node name="UntitledSomething" type="AudioStreamPlayer" parent="music" unique_id=1747901988]
+stream = ExtResource("13_86pii")
+
+[node name="Battle" type="AudioStreamPlayer" parent="music" unique_id=1400116524]
+stream = ExtResource("14_86pii")
+
+[node name="death" type="AudioStreamPlayer" parent="music" unique_id=989608151]
+stream = ExtResource("8_mfnxe")
+
+[node name="zemonke" type="AudioStreamPlayer" parent="music" unique_id=1409402969]
+stream = ExtResource("15_86pii")
+
+[node name="Kevin" type="AudioStreamPlayer" parent="music" unique_id=430555650]
+stream = ExtResource("16_ma34g")
+
+[node name="bok choi" type="AudioStreamPlayer" parent="music" unique_id=886830501]
+stream = ExtResource("17_hokuy")
+
+[node name="kallum" type="AudioStreamPlayer" parent="music" unique_id=670662364]
+stream = ExtResource("18_alxyf")
+
+[node name="BananaLoreRemix" type="AudioStreamPlayer" parent="music" unique_id=20986775]
+stream = ExtResource("19_hokuy")
+
+[node name="sfx" type="Node" parent="." unique_id=2134736088]

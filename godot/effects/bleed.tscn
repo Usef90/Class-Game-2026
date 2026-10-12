@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cxkcsyfb1eu6n"]
+
+[ext_resource type="Script" uid="uid://d4c12ggebe1bf" path="res://effects/effects.gd" id="1_ilgjq"]
+
+[node name="bleed" type="Node" unique_id=742750699]
+script = ExtResource("1_ilgjq")
+startInstantly = true
+effect_name = "bleed"
+stackable = true
+damage = 3.0
+duration = 3
+discription = "does 3 damage over 5 turns"

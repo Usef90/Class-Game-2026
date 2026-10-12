@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://durdxkle8jlyy"
+path="res://.godot/imported/ivan asmr.mp3-8828a83a57fdef0ae04bb7e1e9b367c6.mp3str"
+
+[deps]
+
+source_file="res://sfx/ivan asmr.mp3"
+dest_files=["res://.godot/imported/ivan asmr.mp3-8828a83a57fdef0ae04bb7e1e9b367c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bkiarse6ln4qp"]
+
+[ext_resource type="Script" uid="uid://bs13mwtrtmmc2" path="res://scripts/enemy_stats.gd" id="1_kyf1o"]
+[ext_resource type="FontFile" uid="uid://11stbrnoqjdc" path="res://fonts/montreal/Montreal-Bold.ttf" id="2_bdqi2"]
+[ext_resource type="StyleBox" uid="uid://b1b12snmxeehw" path="res://playerHP.tres" id="2_dkurd"]
+
+[node name="enemy_stats" type="Node2D" unique_id=1287744910]
+script = ExtResource("1_kyf1o")
+
+[node name="HP" type="ProgressBar" parent="." unique_id=1653478021]
+offset_left = -71.0
+offset_top = 69.0
+offset_right = 117.0
+offset_bottom = 96.0
+theme_override_styles/background = ExtResource("2_dkurd")
+show_percentage = false
+
+[node name="Label" type="Label" parent="." unique_id=2073377006]
+offset_left = -61.0
+offset_top = 72.0
+offset_right = 55.0
+offset_bottom = 95.0
+theme_override_fonts/font = ExtResource("2_bdqi2")

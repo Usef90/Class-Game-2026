@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cewkqq80nqc6v"]
+
+[ext_resource type="Script" uid="uid://do83jf3u8l3to" path="res://scripts/transition_manager.gd" id="1_nk83w"]
+[ext_resource type="Texture2D" uid="uid://bfosxkvv6nha1" path="res://Art/zemonke.png" id="2_e4pj3"]
+[ext_resource type="Texture2D" uid="uid://cksk4axyrg4se" path="res://Art/PersonaTransition.png" id="2_sb1xu"]
+[ext_resource type="Texture2D" uid="uid://x22o2yxpjjk5" path="res://Art/ivanthevanprotrait.png" id="4_e4pj3"]
+[ext_resource type="Texture2D" uid="uid://ckmir275cyots" path="res://Art/gordoRAM.png" id="5_esmbu"]
+[ext_resource type="Texture2D" uid="uid://c6s6s8ipmmmdt" path="res://Art/john_test.png" id="6_esmbu"]
+[ext_resource type="Texture2D" uid="uid://cg8ye3ync2qhh" path="res://Art/tickleTimpson.png" id="6_ttsw7"]
+
+[node name="TransitionManager" type="CanvasLayer" unique_id=1361086131]
+layer = 200
+script = ExtResource("1_nk83w")
+black_hold_duration = 0.0
+character_textures = Array[Texture2D]([ExtResource("2_e4pj3"), ExtResource("6_esmbu"), ExtResource("4_e4pj3"), ExtResource("5_esmbu"), ExtResource("6_ttsw7")])
+particle_amount = 1
+particle_color = Color(0.95683426, 0.21730682, 0.21886444, 0.3882353)
+
+[node name="CutIn" type="Control" parent="." unique_id=921341367]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="CutIn" unique_id=729148433]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1300.0
+offset_right = -1300.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.6, 1.6)
+mouse_filter = 2
+texture = ExtResource("2_sb1xu")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Flash" type="ColorRect" parent="CutIn" unique_id=604651310]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Person" type="TextureRect" parent="CutIn" unique_id=2082537522]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BlackFade" type="ColorRect" parent="CutIn" unique_id=1777524339]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)

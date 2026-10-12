@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dc57hjimdun51"]
+
+[ext_resource type="Script" path="res://ShopStuff/pack_opener.gd" id="1_pkopn"]
+[ext_resource type="Texture2D" uid="uid://cf4wqjo1hq1y8" path="res://Art/Pack_Body.png" id="2_oe8na"]
+[ext_resource type="Texture2D" uid="uid://7tcy8gupagje" path="res://Art/Pack_Top.png" id="3_hbpk0"]
+
+[node name="PackOpener" type="Node2D" unique_id=640934205]
+script = ExtResource("1_pkopn")
+
+[node name="Pivot" type="Node2D" parent="." unique_id=1505786151]
+
+[node name="Body" type="Sprite2D" parent="Pivot" unique_id=874784220]
+texture_filter = 1
+texture = ExtResource("2_oe8na")
+
+[node name="Foil" type="Sprite2D" parent="Pivot" unique_id=147741229]
+texture_filter = 1
+texture = ExtResource("3_hbpk0")
+
+[node name="Flash" type="ColorRect" parent="." unique_id=1871742916]
+offset_left = -125.0
+offset_top = -175.0
+offset_right = 125.0
+offset_bottom = 175.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Particles" type="CPUParticles2D" parent="." unique_id=2132735943]
+emitting = false
+amount = 28
+lifetime = 0.6
+one_shot = true

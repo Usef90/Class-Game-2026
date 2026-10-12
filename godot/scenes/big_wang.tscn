@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://chlcggc6dbco7"]
+
+[ext_resource type="Texture2D" uid="uid://coef5hr8gmvtu" path="res://Art/backgroundnoifogorrr.png" id="1_peaf5"]
+[ext_resource type="PackedScene" uid="uid://drr3088qvw5dk" path="res://ui.tscn" id="2_tv4rf"]
+[ext_resource type="Script" uid="uid://dnr14uiyajquj" path="res://scripts/battle_logic.gd" id="3_vm5ie"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="4_xgovk"]
+[ext_resource type="PackedScene" uid="uid://ck6ewcnl8sg60" path="res://enemies/enemy.tscn" id="5_41ai5"]
+[ext_resource type="Texture2D" uid="uid://hsoccewh4ryy" path="res://Art/big_wang_67.png" id="6_peaf5"]
+[ext_resource type="Script" uid="uid://cpukq3r6546by" path="res://dialogue_manger.gd" id="7_w8vp6"]
+[ext_resource type="Script" uid="uid://buclel82cppmv" path="res://scripts/dialogue_entry.gd" id="8_hn52y"]
+[ext_resource type="Texture2D" uid="uid://ckmir275cyots" path="res://Art/gordoRAM.png" id="9_oo3n6"]
+[ext_resource type="Texture2D" uid="uid://c3cqciegumtyh" path="res://Art/big_wang.png" id="9_peaf5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv4rf"]
+atlas = ExtResource("6_peaf5")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vm5ie"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv4rf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_tv4rf"]
+script = ExtResource("8_hn52y")
+character_name = "That JJS fraud guy"
+portrait = ExtResource("9_peaf5")
+paragraphs = "Welcome to Mango Maid Cafe!"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_vm5ie"]
+script = ExtResource("8_hn52y")
+character_name = "Gordo"
+portrait = ExtResource("9_oo3n6")
+paragraphs = "............"
+speak_speed = 15.0
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_peaf5"]
+script = ExtResource("8_hn52y")
+character_name = "Gordo"
+portrait = ExtResource("9_oo3n6")
+paragraphs = "Lad what are we wearing?"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_xgovk"]
+script = ExtResource("8_hn52y")
+character_name = "That JJS fraud guy"
+portrait = ExtResource("9_peaf5")
+paragraphs = "Brochacho. This is peak."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_41ai5"]
+script = ExtResource("8_hn52y")
+character_name = "Gordo RamE"
+portrait = ExtResource("9_oo3n6")
+paragraphs = "I suppose"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_c781l"]
+script = ExtResource("8_hn52y")
+character_name = "That JJS fraud guy"
+portrait = ExtResource("9_peaf5")
+paragraphs = "Yes bro. Now can you get out of here if you aren't going to order anything fatty."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_w8vp6"]
+script = ExtResource("8_hn52y")
+character_name = "Gordo RamE"
+portrait = ExtResource("9_oo3n6")
+paragraphs = "Mate it's on sight"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[node name="big_wang" type="Node2D" unique_id=1916832371]
+
+[node name="background2" type="Sprite2D" parent="." unique_id=1796574471]
+position = Vector2(638, 364)
+scale = Vector2(2.0218751, 2.0218751)
+texture = ExtResource("1_peaf5")
+
+[node name="UI" parent="." unique_id=890284133 instance=ExtResource("2_tv4rf")]
+
+[node name="BattleLogic" type="Node" parent="." unique_id=1136221329]
+script = ExtResource("3_vm5ie")
+music_name = "kallum"
+achievement_will_gain = "kallum_wang"
+
+[node name="player" parent="." unique_id=294404824 instance=ExtResource("4_xgovk")]
+position = Vector2(232, 291)
+
+[node name="enemies" type="Node2D" parent="." unique_id=1413379743]
+position = Vector2(835, 394)
+
+[node name="that jjs fraud guy" parent="enemies" unique_id=708042470 instance=ExtResource("5_41ai5")]
+position = Vector2(198, -108)
+attacks_name = Array[String](["fraud_attacks", "strong_right", "strong_right", "love_beam"])
+setted_HP = 700.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemies/that jjs fraud guy" unique_id=1450351235]
+position = Vector2(14, -24)
+rotation = -0.005377153
+scale = Vector2(1.46875, 1.46875)
+sprite_frames = SubResource("SpriteFrames_vm5ie")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1824490579]
+
+[node name="Dialogue" type="Node" parent="." unique_id=276630500]
+script = ExtResource("7_w8vp6")
+at_when = 1
+dialogues = Array[ExtResource("8_hn52y")]([SubResource("Resource_tv4rf"), SubResource("Resource_vm5ie"), SubResource("Resource_peaf5"), SubResource("Resource_xgovk"), SubResource("Resource_41ai5"), SubResource("Resource_c781l"), SubResource("Resource_w8vp6")])

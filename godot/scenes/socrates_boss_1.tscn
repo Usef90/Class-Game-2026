@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://c3xi1qe3bnw8h"]
+
+[ext_resource type="PackedScene" uid="uid://drr3088qvw5dk" path="res://ui.tscn" id="1_0kkl5"]
+[ext_resource type="Texture2D" uid="uid://bsfocnr3j840q" path="res://Art/backgroundSocrates.png" id="1_fydqt"]
+[ext_resource type="Script" uid="uid://dnr14uiyajquj" path="res://scripts/battle_logic.gd" id="4_n5ufe"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="5_u7jqu"]
+[ext_resource type="PackedScene" uid="uid://ck6ewcnl8sg60" path="res://enemies/enemy.tscn" id="6_1wpc6"]
+[ext_resource type="Script" uid="uid://cpukq3r6546by" path="res://dialogue_manger.gd" id="9_ydhme"]
+[ext_resource type="Script" uid="uid://buclel82cppmv" path="res://scripts/dialogue_entry.gd" id="10_bkkef"]
+[ext_resource type="Texture2D" uid="uid://ckmir275cyots" path="res://Art/gordoRAM.png" id="11_sj4lc"]
+[ext_resource type="Texture2D" uid="uid://ba8g3fhxwmocx" path="res://Art/socrates.png" id="12_6j6yj"]
+[ext_resource type="Texture2D" uid="uid://cnq877jxbfe6n" path="res://Art/socratesPixel.png" id="12_jw067"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bagtd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_jw067")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bagtd"]
+load_path = "res://.godot/imported/socrates.png-feaf5cfc03e92680386259459fc8adb1.ctex"
+
+[sub_resource type="Resource" id="Resource_jw067"]
+script = ExtResource("10_bkkef")
+character_name = "Socrates"
+portrait = SubResource("CompressedTexture2D_bagtd")
+paragraphs = "If toppings are your power, what are you without it?"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_6j6yj"]
+script = ExtResource("10_bkkef")
+character_name = "Gordo RamE"
+portrait = ExtResource("11_sj4lc")
+paragraphs = "Omg not this bum"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_pin3j"]
+script = ExtResource("10_bkkef")
+character_name = "Gordo RamE"
+portrait = ExtResource("11_sj4lc")
+paragraphs = "Just go back to Ancient Greece or something. Nobody cares about your stupid philosophical questions"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_n5ufe"]
+script = ExtResource("10_bkkef")
+character_name = "Socrates"
+portrait = SubResource("CompressedTexture2D_bagtd")
+paragraphs = "La peace youngster La peace.
+Does the burger control the Alien or does the Alien control the burger?"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_bagtd"]
+script = ExtResource("10_bkkef")
+character_name = "Gordo RamE"
+portrait = ExtResource("11_sj4lc")
+paragraphs = "This is utterly a faff. Beat this gentleman up."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_1wpc6"]
+script = ExtResource("10_bkkef")
+character_name = "Socrates"
+portrait = ExtResource("12_6j6yj")
+paragraphs = "If spam is your power what are you without it"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_nsbur"]
+script = ExtResource("10_bkkef")
+character_name = "Gordo RamE"
+portrait = ExtResource("11_sj4lc")
+paragraphs = "mate"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[node name="socratesBoss1" type="Node2D" unique_id=1916832371]
+
+[node name="background" type="Sprite2D" parent="." unique_id=1824490579]
+position = Vector2(638, 359.00003)
+scale = Vector2(1.9916666, 1.9916667)
+texture = ExtResource("1_fydqt")
+
+[node name="UI" parent="." unique_id=890284133 instance=ExtResource("1_0kkl5")]
+
+[node name="BattleLogic" type="Node" parent="." unique_id=1136221329]
+script = ExtResource("4_n5ufe")
+music_name = "Boss1"
+total_enemies = 3
+victory_gold = 30
+achievement_will_gain = "socrates"
+
+[node name="player" parent="." unique_id=294404824 instance=ExtResource("5_u7jqu")]
+position = Vector2(136, 377)
+
+[node name="enemies" type="Node2D" parent="." unique_id=1413379743]
+position = Vector2(969, 315)
+
+[node name="Socrates" parent="enemies" unique_id=708042470 instance=ExtResource("6_1wpc6")]
+position = Vector2(162, 57)
+achievement_will_gain = "socrates"
+attacks_name = Array[String](["poison", "ragebait", "kick", "ragebait", "kick"])
+setted_HP = 200.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemies/Socrates" unique_id=1450351235]
+position = Vector2(14, -24)
+scale = Vector2(1.46875, 1.46875)
+sprite_frames = SubResource("SpriteFrames_bagtd")
+
+[node name="Dialogue" type="Node" parent="." unique_id=276630500]
+script = ExtResource("9_ydhme")
+at_when = 1
+dialogues = Array[ExtResource("10_bkkef")]([SubResource("Resource_jw067"), SubResource("Resource_6j6yj"), SubResource("Resource_pin3j"), SubResource("Resource_n5ufe"), SubResource("Resource_bagtd")])
+
+[node name="Dialogue2" type="Node" parent="." unique_id=1422045770]
+script = ExtResource("9_ydhme")
+at_when = 3
+dialogues = Array[ExtResource("10_bkkef")]([SubResource("Resource_1wpc6"), SubResource("Resource_nsbur")])

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bd7byqgwaxqt7"]
+
+[ext_resource type="Script" uid="uid://djpecrs2843jt" path="res://effects_enemies/effect_enemies.gd" id="1_w7pbh"]
+
+[node name="heal" type="Node" unique_id=289820757]
+script = ExtResource("1_w7pbh")
+effect_name = "heal"
+damage = -30.0
+target_stats = "HP"
+duration = 1
+Effect_strength = 0.5

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://qbise32b7cyi"]
+
+[ext_resource type="Script" uid="uid://d4c12ggebe1bf" path="res://effects/effects.gd" id="1_c5lv3"]
+
+[node name="burn" type="Node" unique_id=742750699]
+script = ExtResource("1_c5lv3")
+startInstantly = true
+effect_name = "burn"
+damage = 5.0
+duration = 1
+discription = "does 5 damage for a turn"

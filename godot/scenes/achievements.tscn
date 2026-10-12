@@ -1,0 +1,525 @@
+[gd_scene format=3 uid="uid://dyr2uykw6m7ji"]
+
+[ext_resource type="PackedScene" uid="uid://cvilox2r6qpf4" path="res://scenes/achievement_icon.tscn" id="1_5e7lm"]
+[ext_resource type="Script" uid="uid://b0ncgr6t2nb6j" path="res://scenes/achievements.gd" id="1_jqgop"]
+[ext_resource type="StyleBox" uid="uid://dk0m455vrnwhn" path="res://cool_colours.tres" id="2_2q86a"]
+[ext_resource type="Texture2D" uid="uid://5a768ou6j0qq" path="res://Art/fridge.png" id="2_ocxot"]
+[ext_resource type="Texture2D" uid="uid://bdvkceitu16m7" path="res://Art/john vs socrates.png" id="3_wf1mw"]
+[ext_resource type="Texture2D" uid="uid://ch2uj8uek7s5e" path="res://Art/pickle.png" id="4_gq3ih"]
+[ext_resource type="Texture2D" uid="uid://ck6b3edsml0js" path="res://Art/veganteacherhappy.png" id="4_svwer"]
+[ext_resource type="Texture2D" uid="uid://bpp8nf463r3ow" path="res://Art/burger buns.png" id="5_jnbt2"]
+[ext_resource type="Texture2D" uid="uid://cgq5juax45dja" path="res://Art/veganteacherUnaprove.png" id="5_u6gvo"]
+[ext_resource type="Texture2D" uid="uid://u0cggeql8v8u" path="res://Art/osage.png" id="6_gq3ih"]
+[ext_resource type="Texture2D" uid="uid://c05xn64elpeev" path="res://Art/achievements/banana_nuke_achievement.png" id="9_u6gvo"]
+[ext_resource type="Texture2D" uid="uid://dqoxylbtyrefr" path="res://Art/achievements/john_achievements.png" id="10_j7pb0"]
+[ext_resource type="Texture2D" uid="uid://cwg4lq0qkcrsv" path="res://Art/tetoPortraits.png" id="11_6xs2c"]
+[ext_resource type="Texture2D" uid="uid://bab1o10ejj1af" path="res://Art/achievements/images (2).jpg" id="12_vwjy8"]
+[ext_resource type="Texture2D" uid="uid://dk2h72li35fn7" path="res://Art/achievements/EDZ1lGfXYAMFpwJ.jpg" id="13_yspdk"]
+[ext_resource type="Texture2D" uid="uid://da8wxm3iug2ap" path="res://Art/achievements/images.jpg" id="14_fvdao"]
+[ext_resource type="Texture2D" uid="uid://be3m4qbhhe130" path="res://Art/achievements/cat.jpg" id="15_divsn"]
+[ext_resource type="Texture2D" uid="uid://bl134k3yp7ew1" path="res://Art/achievements/monkey.jpg" id="16_s4x2u"]
+[ext_resource type="Texture2D" uid="uid://buqw2k8qteg4x" path="res://Art/achievements/bok choi.jpg" id="17_vwjy8"]
+[ext_resource type="Texture2D" uid="uid://bskdtkxvw44iy" path="res://Art/achievements/Screenshot 2026-08-28 180257.png" id="18_yspdk"]
+[ext_resource type="Texture2D" uid="uid://1su3q6t57rc0" path="res://Art/achievements/scaryKevin.png" id="19_yspdk"]
+[ext_resource type="Texture2D" uid="uid://c6tem6jqel8e3" path="res://Art/achievements/mango.jpg" id="20_divsn"]
+[ext_resource type="Texture2D" uid="uid://7l46xxn5bcou" path="res://Art/fish.png" id="21_s4x2u"]
+[ext_resource type="Texture2D" uid="uid://bdngecq5euxf0" path="res://Art/damn.png" id="22_ofnci"]
+[ext_resource type="Texture2D" uid="uid://ccadgbw6w63gl" path="res://Art/peanut.png" id="23_ocxot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5e7lm"]
+size = Vector2(97, 97.5)
+
+[node name="achievements" type="Node2D" unique_id=1364556289]
+script = ExtResource("1_jqgop")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2004142204]
+offset_right = 1279.0
+offset_bottom = 715.0
+texture = ExtResource("2_ocxot")
+
+[node name="CanvasLayer" type="HFlowContainer" parent="." unique_id=2067014758]
+offset_left = 268.0
+offset_top = 6.0
+offset_right = 1268.0
+offset_bottom = 361.0
+size_flags_horizontal = 3
+mouse_filter = 2
+last_wrap_alignment = 1
+
+[node name="achievements" type="Control" parent="CanvasLayer" unique_id=1203938232]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/achievements" unique_id=504085499 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "Get killed by John"
+display_title = "How do you lose to him"
+achievement_name = "john"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/achievements/achievement_icon3" unique_id=1062374155]
+texture_filter = 3
+position = Vector2(2.4999976, 5.499998)
+scale = Vector2(0.07734375, 0.1375)
+texture = ExtResource("3_wf1mw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/achievements/achievement_icon3" unique_id=1126216862]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="achievements2" type="Control" parent="CanvasLayer" unique_id=1123187710]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/achievements2" unique_id=1251500302 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "Using vegan upgrades"
+display_title = "Vegan teacher approves"
+achievement_name = "vegan"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/achievements2/achievement_icon3" unique_id=125030906]
+texture_filter = 3
+position = Vector2(2.5, 5.25)
+scale = Vector2(0.194, 0.194)
+texture = ExtResource("4_svwer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/achievements2/achievement_icon3" unique_id=819815821]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="achievements3" type="Control" parent="CanvasLayer" unique_id=1404442208]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/achievements3" unique_id=2044755662 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "Don't use vegan products"
+display_title = "Vegan teacher unimpress"
+achievement_name = "meat_eater"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/achievements3/achievement_icon3" unique_id=1808478748]
+texture_filter = 3
+position = Vector2(2.625011, 4.624989)
+scale = Vector2(0.19350003, 0.19350003)
+texture = ExtResource("5_u6gvo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/achievements3/achievement_icon3" unique_id=640001803]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="achievements4" type="Control" parent="CanvasLayer" unique_id=1364541547]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/achievements4" unique_id=1797729996 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "Only pickle upgrade"
+display_title = "Pickle Main"
+achievement_name = "pickle"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/achievements4/achievement_icon3" unique_id=749052119]
+texture_filter = 3
+position = Vector2(3.5000067, 6)
+scale = Vector2(0.7734374, 0.765625)
+texture = ExtResource("4_gq3ih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/achievements4/achievement_icon3" unique_id=685791703]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="achievements5" type="Control" parent="CanvasLayer" unique_id=1376165246]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/achievements5" unique_id=730910899 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "No upgrades"
+display_title = "A nothing burger"
+achievement_name = "nothing_burger"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/achievements5/achievement_icon3" unique_id=1416523156]
+texture_filter = 3
+position = Vector2(2.5000038, 5.500003)
+scale = Vector2(0.75781244, 0.7734375)
+texture = ExtResource("5_jnbt2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/achievements5/achievement_icon3" unique_id=1758957131]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="achievements6" type="Control" parent="CanvasLayer" unique_id=756888541]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/achievements6" unique_id=637044953 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "Get killed by pearto.
+wait this isn't a teto song
+Issacglazer is such a larp larp sahur"
+display_title = "ran over by lag train"
+achievement_name = "lagtrain"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/achievements6/achievement_icon3" unique_id=1848861742]
+texture_filter = 3
+position = Vector2(2.4999695, 5.5000033)
+scale = Vector2(0.19399998, 0.19399999)
+texture = ExtResource("6_gq3ih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/achievements6/achievement_icon3" unique_id=1928376968]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="achievements7" type="Control" parent="CanvasLayer" unique_id=1504264752]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/achievements7" unique_id=290758747 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "Get nuked by zemonke"
+display_title = "The best animation ever"
+achievement_name = "nuked"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/achievements7/achievement_icon3" unique_id=989193834]
+texture_filter = 3
+position = Vector2(2.4999695, 5.5000033)
+scale = Vector2(0.19399998, 0.19399999)
+texture = ExtResource("9_u6gvo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/achievements7/achievement_icon3" unique_id=902746040]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="Beat John" type="Control" parent="CanvasLayer" unique_id=993261764]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/Beat John" unique_id=169921726 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "beat the tutorial"
+display_title = "John is a real fraud"
+achievement_name = "tutorial_completed"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/Beat John/achievement_icon3" unique_id=56513902]
+texture_filter = 3
+position = Vector2(2.4999695, 5.5000033)
+scale = Vector2(0.19399998, 0.19399999)
+texture = ExtResource("10_j7pb0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Beat John/achievement_icon3" unique_id=1593476051]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="real pear" type="Control" parent="CanvasLayer" unique_id=1028412686]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/real pear" unique_id=1305287996 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "beat some random shmuck"
+display_title = "beat John again"
+achievement_name = "pears"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/real pear/achievement_icon3" unique_id=1048051272]
+texture_filter = 3
+position = Vector2(1.999979, 4.5000057)
+scale = Vector2(0.13333322, 0.091666676)
+texture = ExtResource("11_6xs2c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/real pear/achievement_icon3" unique_id=1351360820]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="socrates" type="Control" parent="CanvasLayer" unique_id=998721644]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/socrates" unique_id=1541082091 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "beat Socrates"
+display_title = "My technique has not use?!!"
+achievement_name = "socrates"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/socrates/achievement_icon3" unique_id=2078116283]
+texture_filter = 3
+position = Vector2(2.4999676, 4.5300035)
+scale = Vector2(0.25260416, 0.19026922)
+texture = ExtResource("12_vwjy8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/socrates/achievement_icon3" unique_id=69300832]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="Ivan" type="Control" parent="CanvasLayer" unique_id=511427395]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/Ivan" unique_id=1529774324 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "beat Ivan"
+display_title = "Unable to kidnap people anymore"
+achievement_name = "Ivan"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/Ivan/achievement_icon3" unique_id=324459992]
+texture_filter = 3
+position = Vector2(1.9999952, 6.500008)
+scale = Vector2(0.20416687, 0.26944447)
+texture = ExtResource("13_yspdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Ivan/achievement_icon3" unique_id=1686695716]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="Italian" type="Control" parent="CanvasLayer" unique_id=108300397]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/Italian" unique_id=384296101 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "beat the Italian guys
+
+wait is this an italian guy or a french guy?"
+display_title = "Wait why did we help furryking?"
+achievement_name = "Italian"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/Italian/achievement_icon3" unique_id=1002023494]
+texture_filter = 3
+position = Vector2(2.999958, 5.499999)
+scale = Vector2(0.25753412, 0.17733091)
+texture = ExtResource("14_fvdao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Italian/achievement_icon3" unique_id=201967862]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="ConeL" type="Control" parent="CanvasLayer" unique_id=918057316]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/ConeL" unique_id=2139639135 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "beat ConeL"
+display_title = "What's 17 more years "
+achievement_name = "ConeL"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/ConeL/achievement_icon3" unique_id=658441580]
+texture_filter = 3
+position = Vector2(2.0000021, 5.000005)
+scale = Vector2(0.17657658, 0.17721519)
+texture = ExtResource("15_divsn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/ConeL/achievement_icon3" unique_id=930109864]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="Rack" type="Control" parent="CanvasLayer" unique_id=643663182]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/Rack" unique_id=1283393148 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "beat zemonke"
+display_title = "dodging nukes"
+achievement_name = "Rack"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/Rack/achievement_icon3" unique_id=923949361]
+texture_filter = 3
+position = Vector2(2.000001, 5.499999)
+scale = Vector2(0.13279133, 0.23913047)
+texture = ExtResource("16_s4x2u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Rack/achievement_icon3" unique_id=1214805671]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="Choi" type="Control" parent="CanvasLayer" unique_id=1278921679]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/Choi" unique_id=275109528 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "beat Bok Choi"
+display_title = "free Bok choy"
+achievement_name = "Choi"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/Choi/achievement_icon3" unique_id=1327500982]
+texture_filter = 3
+position = Vector2(3.000011, 5.5000033)
+scale = Vector2(0.16134453, 0.19399999)
+texture = ExtResource("17_vwjy8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Choi/achievement_icon3" unique_id=574179193]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="big_wang" type="Control" parent="CanvasLayer" unique_id=2008139083]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/big_wang" unique_id=746901227 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "beat that jjs fraud guy"
+display_title = "worst maid ever"
+achievement_name = "kallum_wang"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/big_wang/achievement_icon3" unique_id=614803986]
+texture_filter = 3
+position = Vector2(2.500019, 4.999995)
+scale = Vector2(0.35144937, 0.41702133)
+texture = ExtResource("18_yspdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/big_wang/achievement_icon3" unique_id=216220804]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="me67" type="Control" parent="CanvasLayer" unique_id=1878015268]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/me67" unique_id=1950103087 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "beat me67"
+display_title = "He still robbed you"
+achievement_name = "me67"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/me67/achievement_icon3" unique_id=224382993]
+texture_filter = 3
+position = Vector2(2.5000134, 6.000005)
+scale = Vector2(0.48499995, 0.49)
+texture = ExtResource("19_yspdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/me67/achievement_icon3" unique_id=856186569]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="mango" type="Control" parent="CanvasLayer" unique_id=142103699]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/mango" unique_id=408289946 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "beat Dr Mango123"
+display_title = "Should of just gave it."
+achievement_name = "mango"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/mango/achievement_icon3" unique_id=658967820]
+texture_filter = 3
+position = Vector2(2.9999666, 4.999998)
+scale = Vector2(0.17328517, 0.17689529)
+texture = ExtResource("20_divsn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/mango/achievement_icon3" unique_id=1528135940]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="fih" type="Control" parent="CanvasLayer" unique_id=1916355644]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/fih" unique_id=1113149489 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "using fish only"
+display_title = "Fih"
+achievement_name = "fih"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/fih/achievement_icon3" unique_id=1212258005]
+texture_filter = 3
+position = Vector2(1.4999866, 5)
+scale = Vector2(0.75781244, 0.74999994)
+texture = ExtResource("21_s4x2u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/fih/achievement_icon3" unique_id=1801476067]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="oil" type="Control" parent="CanvasLayer" unique_id=245069360]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/oil" unique_id=273152579 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "Get hit by your own attacks 3 times"
+display_title = "less than helpful"
+achievement_name = "oil_up"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/oil/achievement_icon3" unique_id=1564107382]
+texture_filter = 3
+position = Vector2(2.0000048, 5.000005)
+scale = Vector2(0.49000007, 0.48999995)
+texture = ExtResource("22_ofnci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/oil/achievement_icon3" unique_id=252726108]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="nuts" type="Control" parent="CanvasLayer" unique_id=1199913276]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="achievement_icon3" parent="CanvasLayer/nuts" unique_id=2060992956 instance=ExtResource("1_5e7lm")]
+position = Vector2(47, 45)
+discripttion = "Only Nuts"
+display_title = "Deez "
+achievement_name = "nuts"
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/nuts/achievement_icon3" unique_id=1143407822]
+texture_filter = 3
+position = Vector2(1.9999714, 5)
+scale = Vector2(0.734374, 0.765625)
+texture = ExtResource("23_ocxot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/nuts/achievement_icon3" unique_id=1884322753]
+position = Vector2(2.5, 5.25)
+shape = SubResource("RectangleShape2D_5e7lm")
+
+[node name="achievement_viewer" type="Panel" parent="." unique_id=845350667]
+offset_left = 9.0
+offset_top = 377.0
+offset_right = 1273.0
+offset_bottom = 707.0
+theme_override_styles/panel = ExtResource("2_2q86a")
+
+[node name="discription" type="Label" parent="achievement_viewer" unique_id=844368894]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 63.0
+offset_right = 1276.0
+offset_bottom = 324.0
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+
+[node name="title" type="Label" parent="achievement_viewer" unique_id=51738136]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 19.0
+offset_right = 1263.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 31
+
+[node name="Button" type="Button" parent="." unique_id=1720478471]
+offset_left = 9.0
+offset_top = 47.0
+offset_right = 193.0
+offset_bottom = 159.0
+text = "Go back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chh4u4klcqyok"
+path="res://.godot/imported/boss2(mango maybe).mp3-d254075627c9b7a1258cf33e56ac8add.mp3str"
+
+[deps]
+
+source_file="res://music/boss2(mango maybe).mp3"
+dest_files=["res://.godot/imported/boss2(mango maybe).mp3-d254075627c9b7a1258cf33e56ac8add.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

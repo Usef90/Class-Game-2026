@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://d8ss8ob3168u"]
+
+[ext_resource type="PackedScene" uid="uid://drr3088qvw5dk" path="res://ui.tscn" id="1_d3jkd"]
+[ext_resource type="Texture2D" uid="uid://3wdtby4j21u4" path="res://Art/backgroundlevel1.png" id="1_u3awl"]
+[ext_resource type="Script" uid="uid://dnr14uiyajquj" path="res://scripts/battle_logic.gd" id="5_14jow"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="6_mvsps"]
+[ext_resource type="PackedScene" uid="uid://ck6ewcnl8sg60" path="res://enemies/enemy.tscn" id="7_jvkml"]
+[ext_resource type="Texture2D" uid="uid://c6s6s8ipmmmdt" path="res://Art/john_test.png" id="8_3w4mx"]
+[ext_resource type="Texture2D" uid="uid://bjhndtvnls2fo" path="res://Art/tetopeartestsize.png" id="9_u068y"]
+[ext_resource type="Script" uid="uid://cpukq3r6546by" path="res://dialogue_manger.gd" id="10_1ooyw"]
+[ext_resource type="Script" uid="uid://buclel82cppmv" path="res://scripts/dialogue_entry.gd" id="11_ai3nx"]
+[ext_resource type="Texture2D" uid="uid://3j2l4ohtdmgt" path="res://Art/johnsmith.png" id="12_2ku1j"]
+[ext_resource type="Texture2D" uid="uid://ckmir275cyots" path="res://Art/gordoRAM.png" id="13_3oqy1"]
+[ext_resource type="Texture2D" uid="uid://cjffjbraxujuc" path="res://Art/pearto.png" id="13_gnai3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x76d4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_3w4mx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_715r7"]
+atlas = ExtResource("9_u068y")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_irjls"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_715r7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_u3awl"]
+script = ExtResource("11_ai3nx")
+character_name = "Gordo RamE"
+portrait = ExtResource("13_3oqy1")
+paragraphs = "Some attacks are Aoe.
+Just use it like the block card"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_i8kv5"]
+script = ExtResource("11_ai3nx")
+character_name = "Gordo RamE"
+portrait = ExtResource("13_3oqy1")
+paragraphs = "Also some cards gives buffs and debuffs. The buffs and debuffs are indicated below you and the enemies"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_f31uk"]
+script = ExtResource("11_ai3nx")
+character_name = "Gordo RamE"
+portrait = ExtResource("13_3oqy1")
+paragraphs = "also to skip dialogue just press the left corner and click to skip the speaking animation. I think you guys can all see."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_dxn3v"]
+script = ExtResource("11_ai3nx")
+character_name = "Pearto"
+portrait = ExtResource("13_gnai3")
+paragraphs = "Are we done now? I was about to leave."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_14jow"]
+script = ExtResource("11_ai3nx")
+character_name = "John Smith"
+portrait = ExtResource("12_2ku1j")
+paragraphs = "Get rid of this burger thing and I'll give you some baguette."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_gnai3"]
+script = ExtResource("11_ai3nx")
+character_name = "Gordo RamE"
+portrait = ExtResource("13_3oqy1")
+paragraphs = "Totally out of order these fellas are."
+music = "Battle"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_2ku1j"]
+script = ExtResource("11_ai3nx")
+character_name = "Somebody"
+paragraphs = "tutorial explained"
+speak_speed = 100.0
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[node name="level_1" type="Node2D" unique_id=1916832371]
+
+[node name="background" type="Sprite2D" parent="." unique_id=1824490579]
+position = Vector2(638, 357)
+scale = Vector2(2, 2)
+texture = ExtResource("1_u3awl")
+
+[node name="UI" parent="." unique_id=890284133 instance=ExtResource("1_d3jkd")]
+
+[node name="BattleLogic" type="Node" parent="." unique_id=1136221329]
+script = ExtResource("5_14jow")
+music_name = "LevelSelect"
+total_enemies = 3
+victory_gold = 20
+achievement_will_gain = "pears"
+
+[node name="player" parent="." unique_id=294404824 instance=ExtResource("6_mvsps")]
+position = Vector2(192, 308)
+
+[node name="enemies" type="Node2D" parent="." unique_id=1413379743]
+position = Vector2(835, 302)
+
+[node name="John Smith" parent="enemies" unique_id=1564538628 instance=ExtResource("7_jvkml")]
+position = Vector2(-6, -1)
+attacks_name = Array[String](["punch", "kick"])
+setted_HP = 75.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemies/John Smith" unique_id=1328646470]
+position = Vector2(14, -24)
+scale = Vector2(1.46875, 1.46875)
+sprite_frames = SubResource("SpriteFrames_x76d4")
+
+[node name="Pearto" parent="enemies" unique_id=1307804686 instance=ExtResource("7_jvkml")]
+position = Vector2(267, 4)
+death_particle = "boom"
+id = 1
+attacks_name = Array[String](["giga_punch"])
+setted_HP = 100.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemies/Pearto" unique_id=1673382165]
+position = Vector2(4.999996, -18.999996)
+scale = Vector2(0.82617164, 0.82617164)
+sprite_frames = SubResource("SpriteFrames_irjls")
+
+[node name="Dialogue" type="Node" parent="." unique_id=276630500]
+script = ExtResource("10_1ooyw")
+at_when = 1
+dialogues = Array[ExtResource("11_ai3nx")]([SubResource("Resource_u3awl"), SubResource("Resource_i8kv5"), SubResource("Resource_f31uk"), SubResource("Resource_dxn3v"), SubResource("Resource_14jow"), SubResource("Resource_gnai3"), SubResource("Resource_2ku1j")])

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cr4crqx27b4tu"]
+
+[ext_resource type="Script" uid="uid://d4c12ggebe1bf" path="res://effects/effects.gd" id="1_1nhcx"]
+
+[node name="rage" type="Node" unique_id=800013498]
+script = ExtResource("1_1nhcx")
+startInstantly = true
+effect_name = "rage"
+type = "buff"
+target_stats = "damage_multiplier"
+duration = 1
+Effect_strength = 1.25
+discription = "increase damage by 5 turns"

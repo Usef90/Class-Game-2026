@@ -60,7 +60,9 @@ After editing the game or adding assets:
 3. Make sure you haven't included unrelated or temporary files.
 4. Enter a short summary describing your changes in the **Summary** field.
 5. Click **Commit to your selected branch**.
+
 ![commit to branch](<README images/commit to branch.png>)
+
 
 A commit is a saved checkpoint of your work.
 

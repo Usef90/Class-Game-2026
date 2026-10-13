@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cswy7u6a8b46h" path="res://Art/redflash.png" id="1_n5rqp"]
 [ext_resource type="Script" uid="uid://bme11j2i2ndyn" path="res://scripts/end_turn_button.gd" id="1_nltto"]
 [ext_resource type="Script" uid="uid://c4jtsd8b6ntsy" path="res://energy_display.gd" id="2_ibotj"]
-[ext_resource type="FontFile" path="res://fonts/kirifont/Kirifont.tres" id="2_waa4j"]
+[ext_resource type="FontFile" uid="uid://ccayegnrvdsmm" path="res://fonts/kirifont/Kirifont.tres" id="2_waa4j"]
 [ext_resource type="PackedScene" uid="uid://balspnmwbb0nl" path="res://dialogue_manager/dialogues.tscn" id="3_n5ude"]
 [ext_resource type="StyleBox" uid="uid://bjncy0blgwv8n" path="res://hover.tres" id="4_irxef"]
 [ext_resource type="StyleBox" uid="uid://dk0m455vrnwhn" path="res://cool_colours.tres" id="4_n5rqp"]
@@ -72,7 +72,6 @@ text = "end turn"
 script = ExtResource("1_nltto")
 
 [node name="play_testing_purpose" type="Button" parent="." unique_id=12553282]
-visible = false
 offset_left = 1097.0
 offset_top = 30.0
 offset_right = 1263.0

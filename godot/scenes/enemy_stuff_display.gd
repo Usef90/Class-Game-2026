@@ -1,5 +1,7 @@
 extends Label
 
+# Tell what action the enemies are doing.
+# opposite of show not tell
 func _ready() -> void:
 	Events.connect("update_display", _change)
 	visible = false

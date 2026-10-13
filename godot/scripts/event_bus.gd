@@ -1,6 +1,6 @@
 extends Node
 
-# most global signla
+# most global signlal in the game
 
 signal card_selected(id)
 signal in_attack_area

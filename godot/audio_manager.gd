@@ -1,7 +1,9 @@
 extends Node
 
 # Holy bum I lost all my comments
-
+## you could do audiomanger. fuction name and thingy will happen
+## put music in the music node. yep 67 mango
+## questionable names there
 
 var active_music_stream: AudioStreamPlayer
 

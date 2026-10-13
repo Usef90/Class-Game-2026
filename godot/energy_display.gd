@@ -1,5 +1,7 @@
 extends Label
 
+## manages energy and stuff i think on MUMs
+
 var max_energy: float
 
 var total_energy: float

@@ -9,7 +9,7 @@ func _ready() -> void:
 	Events.connect("players_turn", _take_side_effects)
 	Events.connect("give_side_effects", _new_side_effects)
 	
-	
+
 func _take_side_effects():
 	if get_parent().get_parent().get_node("BattleLogic").current_state == get_parent().get_parent().get_node("BattleLogic").States.dialogue:
 		return

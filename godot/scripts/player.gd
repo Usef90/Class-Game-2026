@@ -1,7 +1,7 @@
 extends Node2D
 
 
-## change what every you like here it only does it visually
+## change what every you like here. It's like the burger stacking code
 
 var passives = []
 var lettuce = preload("res://Art/lectuce.png")

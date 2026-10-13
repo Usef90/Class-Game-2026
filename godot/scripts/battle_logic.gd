@@ -57,7 +57,7 @@ func _ready() -> void:
 func _dialogue():
 	current_state = States.dialogue
 	
-
+# don't touch could make the game blow up
 func _spawn_attack_choice():
 	var choice = _spawn_attack_choice
 

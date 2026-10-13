@@ -1,5 +1,9 @@
 extends Node2D
 
+## Main menu code.
+## brute force 101
+
+
 var background_no:int = 0
 var background1 = preload("res://Art/gordoTitleScreen.png")
 var background2 = preload("res://Art/furry king mainmenu.png")

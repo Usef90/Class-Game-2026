@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://pukacrdruttt"]
+
+[ext_resource type="Texture2D" uid="uid://qju8bivensgw" path="res://Art/CardTemplateTuff.png" id="1_frame"]
+[ext_resource type="Script" uid="uid://fsh2m5euofhk" path="res://minigames/black_flash(nevered used so don't touch)/black_flash_card.gd" id="2_script"]
+[ext_resource type="PackedScene" uid="uid://ducas8emn2e0u" path="res://minigames/black_flash(nevered used so don't touch)/black_flash_cutscene.tscn" id="3_cutscene"]
+[ext_resource type="PackedScene" uid="uid://br4y3ad61jtrm" path="res://minigames/black_flash(nevered used so don't touch)/black_flash_minigame.tscn" id="4_minigame"]
+[ext_resource type="Texture2D" uid="uid://b5gjgnb6sfvkn" path="res://Art/BlackFlash(no_card).png" id="5_xcd74"]
+
+
+[node name="black_flash" type="TextureRect" unique_id=1185445716]
+offset_left = -72.0
+offset_top = -107.0
+offset_right = 178.0
+offset_bottom = 243.0
+scale = Vector2(0.5706078, 0.5706078)
+texture = ExtResource("1_frame")
+script = ExtResource("2_script")
+cutscene_scene = ExtResource("3_cutscene")
+minigame_scene = ExtResource("4_minigame")
+
+[node name="name" type="Label" parent="." unique_id=1615613337]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 28.0
+offset_right = 263.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 21
+text = "BLACK FLASH"
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=181021197]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 249.0
+offset_bottom = 351.0
+texture = ExtResource("1_frame")
+
+[node name="discription" type="Label" parent="." unique_id=1543046257]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 187.0
+offset_right = 230.0
+offset_bottom = 305.0
+text = "Land the timing
+in the flash for
+a massive damage
+hit. Miss it and
+it barely scratches."
+
+[node name="Label" type="Label" parent="." unique_id=1764595239]
+layout_mode = 0
+offset_left = 9.0
+offset_top = -10.0
+offset_right = 209.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 40
+text = "40"
+
+[node name="BlackFlash(noCard)" type="Sprite2D" parent="." unique_id=428710975]
+position = Vector2(125.89561, 172.74883)
+scale = Vector2(0.9836947, 0.9656689)
+texture = ExtResource("5_xcd74")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,5 +1,6 @@
 extends Node2D
 
+## handles the enemy hp and stuff
 
 var HP: float
 var speed:float
@@ -22,7 +23,7 @@ func _ready() -> void:
 	Events.connect("damaged_enemy", _take_damage)
 	Events.connect("id_chosen",_damage_yourself)
 	Events.connect("players_turn", _take_effect)
-	
+# when enemy gets attack by a single attack card
 func _damage_yourself(id: int ,damage: int) -> void:
 	player_damge_multiplier = get_parent().get_parent().get_parent().get_node("player").get_node("player_stats").damage_multiplier
 	if id != get_parent().id:
@@ -37,7 +38,7 @@ func _damage_yourself(id: int ,damage: int) -> void:
 		get_parent().queue_free()
 		Events.emit_signal("check_victory_conditions")
 
-
+# when enemy gets attack by an AOE attack card
 func _take_damage(damage: int) -> void:
 	player_damge_multiplier = get_parent().get_parent().get_parent().get_node("player").get_node("player_stats").damage_multiplier
 	$HP.value -= damage * player_damge_multiplier * def * PlayerStats.player_damage * PlayerStats.player_aoe_damage

@@ -4,7 +4,8 @@ var count: int = 0
 var current_dialogue: Array
 var doing_dialogue: bool = false
 
-# --- Typewriter Settings ---
+# -Settings but shows in the dialogue thing
+# you'll understand if you see
 var characters_per_second: float = 30.0
 var tween: Tween
 var is_typing: bool = false

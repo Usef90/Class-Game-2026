@@ -1,6 +1,8 @@
 extends Node2D
 class_name enemy
 
+## enemy attacking and adding status effect thing.
+
 @export var death_particle: String = "blood"
 @export var enemy_dying: AudioStream
 
@@ -48,6 +50,7 @@ func _add_status(status:String):
 	type.name = status
 	$status.add_child(type, true)
 	
+# sentence is just thing that says the enemy attacks
 func _attacked_player(attack_id):
 	if playing_animation == true:
 		return

@@ -1,5 +1,6 @@
 extends Node
 
+##player status effect handler
 
 
 var effect = []

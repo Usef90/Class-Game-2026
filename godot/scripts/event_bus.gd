@@ -1,6 +1,6 @@
 extends Node
 
-# battle_logic
+# most global signla
 
 signal card_selected(id)
 signal in_attack_area

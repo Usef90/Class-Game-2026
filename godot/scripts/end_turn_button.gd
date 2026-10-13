@@ -1,5 +1,6 @@
 extends Button
 
+## ending of the player turn
 var animation_playing: bool = false
 
 var enemy_id_turn: int
@@ -17,6 +18,8 @@ func _ready() -> void:
 	Events.connect("damaged_player", playing_animation)
 	Events.connect("players_turn", stop_animation)
 	$"../You won".visible = false
+	
+#prevents player ending players turn during the enemy turns
 func playing_animation():
 	animation_playing = true
 

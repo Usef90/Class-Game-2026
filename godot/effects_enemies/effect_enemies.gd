@@ -1,5 +1,7 @@
 extends Node
 
+## couldn't be bother to explain  it is very similar to the player status effect script
+
 var types_of_effect = ["lethal", "buff"]
 
 @export var effect_name:String

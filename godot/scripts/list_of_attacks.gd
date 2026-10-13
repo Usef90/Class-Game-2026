@@ -1,6 +1,8 @@
 extends Node
 
 #wtf
+# igb
+## All the attacks in the game
 
 var punch = {
 	"name": "punch",

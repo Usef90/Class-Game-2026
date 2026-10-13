@@ -1,10 +1,30 @@
-extends effects_base
+extends Node
+
+class_name effects_base
+
+## player stauts effect
+
+var types_of_effect = ["lethal", "buff"]
+
+
+@export var effect_name = ""
+
+@export var stackable: bool = false
+
+@export var type = "lethal"
+@export var damage: float
+@export var target_stats: String = ""
+@export var duration: int = 5
+@export var Effect_strength: float = 1.2
+
+@export_multiline var discription: String = ""
 
 var player_ingame_stats: Node2D
 var before_stats: float
 
 @export var startInstantly: bool = false
 
+# adds icon for status effect
 func _ready() -> void:
 	player_ingame_stats = get_parent().get_parent().get_node("player_stats")
 	if effect_name in get_parent().effect and !stackable:
@@ -26,7 +46,7 @@ func _ready() -> void:
 	
 	
 
-
+# called in a player script
 func _take_effect():
 	if type == types_of_effect[0] and duration  > 0:
 		player_ingame_stats.get_node("HP").value -= damage 

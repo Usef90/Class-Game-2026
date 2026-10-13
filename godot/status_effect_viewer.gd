@@ -1,6 +1,6 @@
 extends Panel
 
-
+## sshows the status effect of player and enemies
 const offset = Vector2(-50, -20)
 
 func _ready() -> void:

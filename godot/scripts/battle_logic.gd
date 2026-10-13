@@ -1,5 +1,7 @@
 extends Node
 
+
+## handles all the main stuff of the battle scene
 var current_turn: int = 0
 
 var enemy_id_turn: int = 0
@@ -59,6 +61,8 @@ func _dialogue():
 func _spawn_attack_choice():
 	var choice = _spawn_attack_choice
 
+#gives player cards and stuff
+
 func _players_turn():
 	current_state = States.players_turn
 	current_turn += 1
@@ -84,7 +88,7 @@ func _players_turn():
 	get_parent().get_node("player").get_node("player_stats").get_node("HP").value += PlayerStats.player_hitpoint_recovery
 	get_parent().get_node("player").get_node("player_stats").get_node("Label").text = str(int(get_parent().get_node("player").get_node("player_stats").get_node("HP").value)) + "/" +str(int(get_parent().get_node("player").get_node("player_stats").get_node("HP").max_value))
 
-# Cleaned-up sequential ID assignment function
+# card id fixer nevered used 
 func _update_card_ids() -> void:
 	var children = card_list.get_children()
 	num_of_cards = children.size()
@@ -95,6 +99,8 @@ func _enemies_turn():
 	current_state = States.enemies_turn
 	
 	num_of_cards = card_list.get_child_count()
+	
+# check if win ig
 func _process(_delta: float) -> void:
 	_check_victory()
 func _check_victory():

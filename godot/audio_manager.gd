@@ -1,5 +1,8 @@
 extends Node
 
+# Holy bum I lost all my comments
+
+
 var active_music_stream: AudioStreamPlayer
 
 @export_group("Main")

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ducas8emn2e0u"]
+
+[ext_resource type="Script" uid="uid://cfgbcg8sjaij1" path="res://minigames/black_flash(nevered used so don't touch)/black_flash_cutscene.gd" id="1_cs"]
+[ext_resource type="VideoStream" path="res://minigames/black_flash/black_flash_cutscene.ogv" id="2_6cgxy"]
+
+
+[node name="BlackFlashCutscene" type="CanvasLayer" unique_id=1656423575]
+script = ExtResource("1_cs")
+video_stream = ExtResource("2_6cgxy")

@@ -1,5 +1,8 @@
 extends Node
 
+## player modifier when getting an upgrade 
+## stats change happens in the level select
+
 var player_hitpoint: float = 100
 var player_max_energy: float = 50
 

@@ -46,7 +46,7 @@ var regular_item_pool = [
 ]
 
 var pack_pool = [
-	{"display_name": "Buffoon Pack", "id": "Buffoon Pack", "price": 5, "type": "pack", "effect": "Opens 3 random upgrades -- pick 1 to keep"}
+	{"display_name": "Relic", "id": "Buffoon Pack", "price": 5, "type": "pack", "effect": "Im a relic"}
 ]
 
 func _ready() -> void:
@@ -94,7 +94,7 @@ func generate_entire_shop() -> void:
 		var pack_data = temp_pack_pool.pick_random()
 		create_card_on_shelf(pack_data, top_fridge, true) 
 		
-	for i in range(5):
+	for i in range(4):
 		if temp_item_pool.is_empty(): break
 		var item_data = temp_item_pool.pick_random()
 		

@@ -25,19 +25,19 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.94400007
-offset_left = 687.0
-offset_top = 5.0
-offset_right = -443.0
-offset_bottom = -474.68005
+offset_left = 402.0
+offset_top = 313.0
+offset_right = -728.0
+offset_bottom = -166.68005
 grow_horizontal = 2
-theme_override_constants/separation = 144
+theme_override_constants/separation = 50
 
 [node name="BottomFridge" type="HBoxContainer" parent="." unique_id=152868063]
 layout_mode = 0
-offset_left = 248.0
-offset_top = 361.0
-offset_right = 881.0
-offset_bottom = 561.0
+offset_left = 336.0
+offset_top = 6.0
+offset_right = 969.0
+offset_bottom = 206.0
 theme_override_constants/separation = 50
 alignment = 1
 

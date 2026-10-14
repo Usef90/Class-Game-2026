@@ -1,4 +1,5 @@
 extends Node
+## audiomanager used in rob a bank as a ball game
 
 var active_music_stream: AudioStreamPlayer
 

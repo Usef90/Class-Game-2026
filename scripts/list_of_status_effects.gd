@@ -1,5 +1,7 @@
 extends Node
 
+# all the status effect in the game are stored
+
 const poison: PackedScene = preload("res://effects/poison.tscn")
 const rage: PackedScene = preload("res://effects/rage.tscn")
 const blocking: PackedScene = preload("res://effects/block_chance.tscn")

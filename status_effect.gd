@@ -1,6 +1,6 @@
 extends Node
 
-
+## status effect manager
 
 var effect = []
 @onready var status_effect_viewer = $"../status_effect_viewer"

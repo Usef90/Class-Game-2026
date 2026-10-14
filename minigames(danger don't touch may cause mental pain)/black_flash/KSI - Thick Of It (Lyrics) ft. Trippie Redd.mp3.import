@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7aiahx3pputh"
+path="res://.godot/imported/KSI - Thick Of It (Lyrics) ft. Trippie Redd.mp3-01ca8dda8825ccad288d9c3603bc67a8.mp3str"
+
+[deps]
+
+source_file="res://minigames(danger don't touch may cause mental pain)/black_flash/KSI - Thick Of It (Lyrics) ft. Trippie Redd.mp3"
+dest_files=["res://.godot/imported/KSI - Thick Of It (Lyrics) ft. Trippie Redd.mp3-01ca8dda8825ccad288d9c3603bc67a8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

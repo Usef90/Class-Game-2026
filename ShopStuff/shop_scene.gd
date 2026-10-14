@@ -1,5 +1,8 @@
 extends Control
 
+## shop scene thingy kallum coded this since I been on this to add cards I 
+## kinda know how it wokrs
+
 @export var card_scene: PackedScene = preload("res://ShopStuff/shop_item_card.tscn")
 @export var pack_scene: PackedScene = preload("res://Upgrades/upgrade_pack.tscn") 
 
@@ -13,6 +16,7 @@ extends Control
 var reroll_cost: int = 2
 
 # --- UPGRADE POOL ---
+# will we still have the kurger buns upgrade system?
 var upgrade_pool = [
 	{"display_name": "Lettuce","id": "lettuce", "type": "upgrade", "effect": "+30 hp", "icon": preload("res://Art/lectuce.png")},
 	{"display_name": "beef patty","id": "beef_patty", "type": "upgrade", "effect": "damage up by 10%", "icon": preload("res://Art/burgerpatty.png")},
@@ -26,7 +30,9 @@ var upgrade_pool = [
 ]
 
 # --- REGULAR ITEM POOL --- A
-# NOTE: "effect" is what shows up in the hover tooltip in the shop.
+# NOTE: "effect" is what shows up in the hover tooltip in the shop. thx kallum
+# paste the cards into this pool must have the following key
+# "display_name" , "id" "effect", "icon"
 var regular_item_pool = [
 	{"display_name": "tin foil","id": "iron_shield", "price": 3, "type": "defense", "effect": "Blocks 75% incoming damage", "icon": preload("res://Art/Tinfoil(card).png")},
 	{"display_name": "Frying Pan","id": "frying_pan", "price": 5, "type": "attack", "effect": "Deals 13 AOE damage", "icon": preload("res://Art/Frying_pan(_card).png")},

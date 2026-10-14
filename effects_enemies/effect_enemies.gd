@@ -1,5 +1,8 @@
 extends Node
 
+## similar to the player status effect but for the enemies
+## make a new node with this script for it to work
+
 var types_of_effect = ["lethal", "buff"]
 
 @export var effect_name:String

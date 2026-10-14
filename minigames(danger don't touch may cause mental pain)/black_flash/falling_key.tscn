@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3]
 
-[ext_resource type="Texture2D" path="res://minigames/black_flash/art/arrows.webp" id="1_6d672"]
-[ext_resource type="Script" path="res://minigames/black_flash/falling_key.gd" id="2_gvjr8"]
+[ext_resource type="Texture2D" uid="uid://c8sd7wlk0l8pg" path="res://minigames(danger don't touch may cause mental pain)/black_flash/art/arrows.webp" id="1_6d672"]
+[ext_resource type="Script" uid="uid://p41iw6rwjo3f" path="res://minigames(danger don't touch may cause mental pain)/black_flash/falling_key.gd" id="2_gvjr8"]
 
 [node name="FallingKey" type="Sprite2D"]
 texture = ExtResource("1_6d672")

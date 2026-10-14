@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8sd7wlk0l8pg"
-path="res://.godot/imported/arrows.webp-34a1eac9aed8c434b3bda48140f2e606.ctex"
+path="res://.godot/imported/arrows.webp-efe205b59eab8e87d1c786f2410d75fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/black_flash/art/arrows.webp"
-dest_files=["res://.godot/imported/arrows.webp-34a1eac9aed8c434b3bda48140f2e606.ctex"]
+source_file="res://minigames(danger don't touch may cause mental pain)/black_flash/art/arrows.webp"
+dest_files=["res://.godot/imported/arrows.webp-efe205b59eab8e87d1c786f2410d75fa.ctex"]
 
 [params]
 

@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bpp8nf463r3ow" path="res://Art/burger buns.png" id="2_hqtel"]
 [ext_resource type="PackedScene" uid="uid://ctnf6wjt5kuvb" path="res://player_stats.tscn" id="3_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://bons014fxsklb" path="res://status_effect_parent.tscn" id="4_hqtel"]
-[ext_resource type="Script" uid="uid://c27chosir1gm5" path="res://scenes/john_achievement_looker.gd" id="4_u1c27"]
 [ext_resource type="Texture2D" uid="uid://ffwedmd5ilrp" path="res://Art/animation/poison.png" id="5_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://px8pycbe1s55" path="res://Art/animation/harmfulwords.png" id="5_b26j0"]
 [ext_resource type="Texture2D" uid="uid://p5xe5eaxin54" path="res://Art/animation/banana_nuke2.0.png" id="5_bwjto"]
@@ -868,7 +867,6 @@ position = Vector2(0, 32)
 position = Vector2(0, 2)
 
 [node name="achievement_checker" type="Node" parent="player_stats" unique_id=1547040308]
-script = ExtResource("4_u1c27")
 
 [node name="status_effect_viewer" type="HFlowContainer" parent="." unique_id=1875694102]
 offset_left = -62.0

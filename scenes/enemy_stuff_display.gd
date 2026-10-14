@@ -1,5 +1,8 @@
 extends Label
 
+## tells the player what attack the enemy is doing
+## oposite of show not tell ig
+
 func _ready() -> void:
 	Events.connect("update_display", _change)
 	visible = false

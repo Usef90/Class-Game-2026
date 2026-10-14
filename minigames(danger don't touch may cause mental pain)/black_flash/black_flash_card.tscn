@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://pukacrdruttt"]
 
 [ext_resource type="Texture2D" uid="uid://qju8bivensgw" path="res://Art/CardTemplateTuff.png" id="1_frame"]
-[ext_resource type="Script" uid="uid://fsh2m5euofhk" path="res://minigames/black_flash/black_flash_card.gd" id="2_script"]
-[ext_resource type="PackedScene" uid="uid://ducas8emn2e0u" path="res://minigames/black_flash/black_flash_cutscene.tscn" id="3_cutscene"]
-[ext_resource type="PackedScene" uid="uid://br4y3ad61jtrm" path="res://minigames/black_flash/black_flash_minigame.tscn" id="4_minigame"]
+[ext_resource type="Script" uid="uid://fsh2m5euofhk" path="res://minigames(danger don't touch may cause mental pain)/black_flash/black_flash_card.gd" id="2_script"]
+[ext_resource type="PackedScene" uid="uid://ducas8emn2e0u" path="res://minigames(danger don't touch may cause mental pain)/black_flash/black_flash_cutscene.tscn" id="3_cutscene"]
+[ext_resource type="PackedScene" uid="uid://br4y3ad61jtrm" path="res://minigames(danger don't touch may cause mental pain)/black_flash/black_flash_minigame.tscn" id="4_minigame"]
 [ext_resource type="Texture2D" uid="uid://b5gjgnb6sfvkn" path="res://Art/BlackFlash(no_card).png" id="5_xcd74"]
 
 [node name="black_flash" type="TextureRect" unique_id=1185445716]

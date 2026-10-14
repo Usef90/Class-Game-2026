@@ -1,5 +1,7 @@
 extends Panel
 
+## hover over the status effect icon to view what it does
+
 
 const offset = Vector2(-50, -20)
 

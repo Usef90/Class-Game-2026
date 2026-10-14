@@ -1,5 +1,8 @@
 extends TextureRect
 
+## main important script for the cards
+## the drag and drop is very bad so may needs improvement
+
 
 var card_id: int = 0
 
@@ -32,36 +35,39 @@ const POSITION_OF_CARDS:Array = [
 @export var effects_for_enemies: Array[String]
 
 @export var AOE: bool
-@export var lucky: bool = false
+@export var lucky: bool = false # may not be useful for the project
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("click") and !selected_card and mouse_is_incard:
 		selected_card = true
 
 	if event.is_action_released("click") and selected_card:
-		var target_id = get_area_under_mouse()
-		var valid_single_target = (!AOE and target_id != null)
-		var valid_aoe_target = (AOE and in_attack_area)
+		_attack()
 
-		if in_attack_area and can_attack and (valid_single_target or valid_aoe_target):
-			var chance = randf_range(0, 100)
-			if PlayerStats.luck > 95:
-				luck = 95
-			else:
-				luck = PlayerStats.luck
-			_drop(target_id)
-			Events.emit_signal("update_id")
-			if lucky and chance > luck:
-				Globals.failure_counter += 1
-				Events.emit_signal("give_side_effects", "lucky_debuff")
-				if Globals.failure_counter == 3:
-					Globals.achievements["oil_up"] = true
-			else:
-				Globals.failure_counter =0
+# when the card is played
+func _attack():
+	var target_id = get_area_under_mouse()
+	var valid_single_target = (!AOE and target_id != null)
+	var valid_aoe_target = (AOE and in_attack_area)
+
+	if in_attack_area and can_attack and (valid_single_target or valid_aoe_target):
+		# luck part of the script
+		var chance = randf_range(0, 100)
+		if PlayerStats.luck > 95:
+			luck = 95
 		else:
-			selected_card = false
-
-
+			luck = PlayerStats.luck
+		_drop(target_id)
+		Events.emit_signal("update_id")
+		if lucky and chance > luck:
+			Globals.failure_counter += 1
+			Events.emit_signal("give_side_effects", "lucky_debuff")
+			if Globals.failure_counter == 3:
+				Globals.achievements["oil_up"] = true # son what is this achievement name
+		else:
+			Globals.failure_counter =0
+	else:
+		selected_card = false
 func _drop(target_id = null) -> void:
 	if !can_attack:
 		return
@@ -83,7 +89,8 @@ func _drop(target_id = null) -> void:
 	queue_free()
 
 func _process(_delta: float) -> void:
-	if position.x > 235 and position.x < 2000 and position.y > 44 and position.y < 400:
+	# check if thee card is played in the play field
+	if position.x > 100 and position.x < 2000 and position.y > 44 and position.y < 400: 
 		in_attack_area = true
 	else:
 		in_attack_area = false
@@ -92,20 +99,20 @@ func _process(_delta: float) -> void:
 		if card_id >= 0 and card_id < POSITION_OF_CARDS.size():
 			position = POSITION_OF_CARDS[card_id]
 		else:
-			# Fallback so it doesn't crash if card_id is too high
-			push_warning("Card ID %d out of bounds! Clamping..." % card_id)
+			# makes the card go back to the original positions
 			position = POSITION_OF_CARDS[clamp(card_id, 0, POSITION_OF_CARDS.size() - 1)]
 	else:
 		position = get_global_mouse_position() + Vector2(-100,-100)
-	
+
+# getting the area2d under the mouse and seeing if it is the enemy
 func get_area_under_mouse():
 	var space_state = get_world_2d().direct_space_state
 	var mouse_pos = get_global_mouse_position()
 	
 	var query = PhysicsPointQueryParameters2D.new()
 	query.position = mouse_pos
-	query.collide_with_areas = true   # Must be true to look for Area2Ds
-	query.collide_with_bodies = false # Ignore normal physics bodies
+	query.collide_with_areas = true   
+	query.collide_with_bodies = false 
 	
 	var results = space_state.intersect_point(query)
 	if results.size() > 0:
@@ -119,6 +126,7 @@ func _ready() -> void:
 	Events.connect("total_energy", _stop_fighting)
 	Events.connect("players_turn", _can_attack)
 
+# prevents the player to use the card when energy are gone
 func _stop_fighting(total_energy):
 	if total_energy < energy:
 		can_attack =  false

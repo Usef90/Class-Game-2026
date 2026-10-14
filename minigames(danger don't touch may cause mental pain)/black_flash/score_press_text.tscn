@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene format=3]
 
-[ext_resource type="Script" path="res://minigames/black_flash/score_press_text.gd" id="1_84fbn"]
-[ext_resource type="FontFile" path="res://minigames/black_flash/art/Atop-R99O3.ttf" id="1_kmpb6"]
+[ext_resource type="Script" uid="uid://456thvfnmmib" path="res://minigames(danger don't touch may cause mental pain)/black_flash/score_press_text.gd" id="1_84fbn"]
+[ext_resource type="FontFile" uid="uid://j1mqqbkjjkbx" path="res://minigames(danger don't touch may cause mental pain)/black_flash/art/Atop-R99O3.ttf" id="1_kmpb6"]
 
 [sub_resource type="Animation" id="Animation_lbl27"]
 length = 0.001

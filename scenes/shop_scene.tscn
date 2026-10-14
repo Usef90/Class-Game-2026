@@ -1,11 +1,11 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://1sg52mb3m5xn"]
 
-[ext_resource type="Script" path="res://ShopStuff/shop_scene.gd" id="1_xduvy"]
-[ext_resource type="Texture2D" path="res://Art/icon.svg" id="2_2e6ro"]
-[ext_resource type="Script" path="res://Upgrades/pack_opening_scene.gd" id="4_g0e1r"]
-[ext_resource type="PackedScene" path="res://ShopStuff/pack_opener.tscn" id="5_pkopn"]
+[ext_resource type="Script" uid="uid://w1rd75tw6ylc" path="res://ShopStuff/shop_scene.gd" id="1_xduvy"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://Art/icon.svg" id="2_2e6ro"]
+[ext_resource type="Script" uid="uid://u4ks6kn82y6w" path="res://Upgrades/pack_opening_scene.gd" id="4_g0e1r"]
+[ext_resource type="PackedScene" uid="uid://dc57hjimdun51" path="res://ShopStuff/pack_opener.tscn" id="5_pkopn"]
 
-[node name="ShopScene" type="Control"]
+[node name="ShopScene" type="Control" unique_id=1201521916]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xduvy")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1043794953]
 layout_mode = 0
 offset_left = 1.9999999
 offset_right = 130.0
@@ -22,7 +22,7 @@ offset_bottom = 128.0
 scale = Vector2(10.017863, 5.535115)
 texture = ExtResource("2_2e6ro")
 
-[node name="TopFridge" type="HBoxContainer" parent="."]
+[node name="TopFridge" type="HBoxContainer" parent="." unique_id=1837060645]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -34,7 +34,7 @@ offset_bottom = -387.68005
 grow_horizontal = 2
 theme_override_constants/separation = 144
 
-[node name="BottomFridge" type="HBoxContainer" parent="."]
+[node name="BottomFridge" type="HBoxContainer" parent="." unique_id=1450466936]
 layout_mode = 0
 offset_left = 250.0
 offset_top = 467.0
@@ -43,9 +43,9 @@ offset_bottom = 667.0
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="ShopUI" type="CanvasLayer" parent="."]
+[node name="ShopUI" type="CanvasLayer" parent="." unique_id=1532580218]
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1351635411]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,39 +57,39 @@ offset_bottom = -301.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MoneyCounter" type="HBoxContainer" parent="MarginContainer"]
+[node name="MoneyCounter" type="HBoxContainer" parent="MarginContainer" unique_id=494343379]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="MoneyIcon" type="TextureRect" parent="MarginContainer/MoneyCounter"]
+[node name="MoneyIcon" type="TextureRect" parent="MarginContainer/MoneyCounter" unique_id=302354404]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 texture = ExtResource("2_2e6ro")
 expand_mode = 1
 flip_v = true
 
-[node name="MoneyText" type="Label" parent="MarginContainer/MoneyCounter"]
+[node name="MoneyText" type="Label" parent="MarginContainer/MoneyCounter" unique_id=902721944]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "$25"
 
-[node name="ActionMenu" type="VBoxContainer" parent="MarginContainer"]
+[node name="ActionMenu" type="VBoxContainer" parent="MarginContainer" unique_id=1806971158]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 theme_override_constants/separation = 15
 
-[node name="NextStage" type="Button" parent="MarginContainer/ActionMenu"]
+[node name="NextStage" type="Button" parent="MarginContainer/ActionMenu" unique_id=2035259120]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 text = "Next"
 
-[node name="Reroll" type="Button" parent="MarginContainer/ActionMenu"]
+[node name="Reroll" type="Button" parent="MarginContainer/ActionMenu" unique_id=675321590]
 layout_mode = 2
 text = "Reroll $5"
 
-[node name="PackOpeningScene" type="Control" parent="."]
+[node name="PackOpeningScene" type="Control" parent="." unique_id=128291813]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -100,8 +100,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("4_g0e1r")
 
-[node name="ColorRect" type="ColorRect" parent="PackOpeningScene"]
-visible = true
+[node name="ColorRect" type="ColorRect" parent="PackOpeningScene" unique_id=1037333379]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -111,7 +110,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PackOpeningScene"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PackOpeningScene" unique_id=486233886]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -126,11 +125,11 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="PackTitleLabel" type="Label" parent="PackOpeningScene/VBoxContainer"]
+[node name="PackTitleLabel" type="Label" parent="PackOpeningScene/VBoxContainer" unique_id=286140044]
 layout_mode = 2
 
-[node name="ChoicesContainer" type="HBoxContainer" parent="PackOpeningScene/VBoxContainer"]
+[node name="ChoicesContainer" type="HBoxContainer" parent="PackOpeningScene/VBoxContainer" unique_id=1958232379]
 layout_mode = 2
 
-[node name="PackOpener" parent="PackOpeningScene" instance=ExtResource("5_pkopn")]
+[node name="PackOpener" parent="PackOpeningScene" unique_id=1023324309 instance=ExtResource("5_pkopn")]
 position = Vector2(640, 300)

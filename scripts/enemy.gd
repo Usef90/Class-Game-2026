@@ -1,4 +1,7 @@
 extends Node2D
+## Script that handles the enemy attacks
+## and adds status to effect
+
 class_name enemy
 
 @export var death_particle: String = "blood"
@@ -29,8 +32,12 @@ func _ready() -> void:
 	
 	for i in attacks_name:
 		attacks.append(EnemyAttacks.get(i))
+		
+
 func allow_attack():
 	playing_animation = false
+	
+# when enemy get affected by a single target card
 func _add_status_id(targeted_id: int,status:String):
 	if targeted_id != id:
 		return
@@ -41,6 +48,7 @@ func _add_status_id(targeted_id: int,status:String):
 	type.name = status
 	$status.add_child(type, true)
 
+# when enemy get affected by aoe
 func _add_status(status:String):
 	if $enemy_stats.get_node("HP").value == 0:
 		return
@@ -48,7 +56,11 @@ func _add_status(status:String):
 	type.name = status
 	$status.add_child(type, true)
 	
+	
+# enemy attack script
+# enemy attacks when attack_id == their id
 func _attacked_player(attack_id):
+	
 	if playing_animation == true:
 		return
 	playing_animation = true
@@ -64,7 +76,7 @@ func _attacked_player(attack_id):
 	var damage =(attacks[current_attack_choice].get("damage")) * damage_multiplier
 	
 	sentence = name+ " use " + attacks[current_attack_choice].get("name")
-	#yes kallum i used ai for this if statement lmao
+	
 
 	var all_effects = attacks[current_attack_choice]["status_effects"]
 	for effect in all_effects: 

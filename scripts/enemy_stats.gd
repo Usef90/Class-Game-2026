@@ -1,5 +1,6 @@
 extends Node2D
 
+## handles the enemy's hp
 
 var HP: float
 var speed:float
@@ -46,7 +47,9 @@ func _take_damage(damage: int) -> void:
 		Explosions.spawn(get_parent().global_position, null, get_parent().death_particle)
 		get_parent().queue_free()
 		Events.emit_signal("check_victory_conditions")
-		
+
+
+# called every turn
 func _take_effect():
 	if battle_logic_script.current_state == battle_logic_script.States.dialogue:
 		return

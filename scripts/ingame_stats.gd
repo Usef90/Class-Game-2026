@@ -1,6 +1,6 @@
 extends Node2D
 
-
+## player in game stats
 
 var HP: float
 
@@ -36,7 +36,7 @@ func _ready() -> void:
 	$Label.text = str(snapped($HP.value, 0.01)) + "/" +str(int($HP.max_value))
 	Events.connect("damaged_player", _take_damage)
 	
-
+# plays enemy attack animations
 func _on_animations_animation_finished() -> void:
 	animation_player.visible = false
 	$HP.value -= incoming_damage * ((MAX_DEF - def_stats)/MAX_DEF)
@@ -48,7 +48,7 @@ func _on_animations_animation_finished() -> void:
 	Events.emit_signal("players_turn")
 	
 	
-
+# damage the player
 func _take_damage(damage: float, animation: String, enemy_name:String) -> void:
 	if damage > 0 :
 		AudioManager.play_oneshot(damage_sfx)

@@ -1,6 +1,6 @@
 extends Node
 
-# battle_logic
+# all the event in the game i think
 
 signal card_selected(id)
 signal in_attack_area

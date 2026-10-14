@@ -68,6 +68,7 @@ func _spawn_attack_choice():
 
 # player turn 
 # removes the hand and just add 6 more new cards
+# cards drawn are not random
 func _players_turn():
 	current_state = States.players_turn
 	current_turn += 1

@@ -45,7 +45,7 @@ func _on_button_down() -> void:
 	Events.emit_signal("enemies_turn", enemy_id_turn)
 
 	
-
+# buttons connections that I connected to this script cuz
 
 func _on_next_button_down() -> void:
 	TransitionManager.play_transition("res://scenes/level_select.tscn")

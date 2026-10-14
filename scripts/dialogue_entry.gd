@@ -1,4 +1,5 @@
 class_name DialogueEntry
+# custom resource for dialogues
 extends Resource
 
 @export var character_name: String = ""

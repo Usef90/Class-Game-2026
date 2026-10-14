@@ -1,11 +1,22 @@
 [gd_scene format=3 uid="uid://di1xdohl1yucq"]
 
 [ext_resource type="Texture2D" uid="uid://fljhhb8q5smd" path="res://Art/gordoTitleScreen.png" id="1_lj3s5"]
-[ext_resource type="Script" uid="uid://r7t1po6x3fv2" path="res://scenes/music_room.gd" id="1_sdg5r"]
 [ext_resource type="PackedScene" uid="uid://ck7l3mylwuode" path="res://scenes/music_room_button.tscn" id="2_qt6lu"]
 
+[sub_resource type="GDScript" id="GDScript_qt6lu"]
+script/source = "extends Node2D
+
+func _ready() -> void:
+	AudioManager.stop()
+	
+
+
+func _on_button_button_down() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/main_menu.tscn\")
+"
+
 [node name="Music Room" type="Node2D" unique_id=853949776]
-script = ExtResource("1_sdg5r")
+script = SubResource("GDScript_qt6lu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=896796035]
 

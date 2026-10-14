@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://dvxft1w6recdt"]
+
+[ext_resource type="Texture2D" uid="uid://bt8pd6qtc2tsv" path="res://Art/backgroundme67.png" id="1_4bo1f"]
+[ext_resource type="PackedScene" uid="uid://drr3088qvw5dk" path="res://ui.tscn" id="2_t6hq3"]
+[ext_resource type="Script" uid="uid://dnr14uiyajquj" path="res://scripts/battle_logic.gd" id="3_w878y"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="4_4l37w"]
+[ext_resource type="PackedScene" uid="uid://ck6ewcnl8sg60" path="res://enemies/enemy.tscn" id="5_kgh5h"]
+[ext_resource type="Texture2D" uid="uid://cvnnlej3hajr7" path="res://Art/me68.png" id="6_y02hn"]
+[ext_resource type="Script" uid="uid://cpukq3r6546by" path="res://dialogue_manger.gd" id="7_ujw1h"]
+[ext_resource type="Script" uid="uid://buclel82cppmv" path="res://scripts/dialogue_entry.gd" id="8_7ddbm"]
+[ext_resource type="Texture2D" uid="uid://botua6w2u4xeo" path="res://Art/me67.png" id="9_ulq75"]
+[ext_resource type="Texture2D" uid="uid://ckmir275cyots" path="res://Art/gordoRAM.png" id="10_kr1m1"]
+[ext_resource type="Texture2D" uid="uid://dbn20ahdfwck3" path="res://Art/coneLTest.png" id="11_t6hq3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xte1c"]
+atlas = ExtResource("6_y02hn")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gk2jk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xte1c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_ayegc"]
+script = ExtResource("8_7ddbm")
+character_name = "Me67"
+portrait = ExtResource("9_ulq75")
+paragraphs = "what the ....
+"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_xte1c"]
+script = ExtResource("8_7ddbm")
+character_name = "Me67"
+portrait = ExtResource("9_ulq75")
+paragraphs = "a top less burger"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_gk2jk"]
+script = ExtResource("8_7ddbm")
+character_name = "Gordo RamE"
+portrait = ExtResource("10_kr1m1")
+paragraphs = "At this point... words are unnecessary!"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_8xagh"]
+script = ExtResource("8_7ddbm")
+character_name = "Me67"
+paragraphs = "huh i dont get"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_rasdo"]
+script = ExtResource("8_7ddbm")
+character_name = "Gordo RamE"
+portrait = ExtResource("10_kr1m1")
+paragraphs = "Do you not remenber  throwing out a burger bun."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_xvvvi"]
+script = ExtResource("8_7ddbm")
+character_name = "Me67"
+portrait = ExtResource("9_ulq75")
+paragraphs = "ohhhhhh yeah
+
+so does this mean...."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_q4ehi"]
+script = ExtResource("8_7ddbm")
+character_name = "Gordo RamE"
+portrait = ExtResource("10_kr1m1")
+paragraphs = "yes we're going to beat you up."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_g0s7f"]
+script = ExtResource("8_7ddbm")
+character_name = "Me67"
+portrait = ExtResource("9_ulq75")
+paragraphs = "Let me say something deep before we fight.
+
+This is truly a Kurger Buns"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w878y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_t6hq3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="get jumped by every one" type="Node2D" unique_id=1916832371]
+
+[node name="background2" type="Sprite2D" parent="." unique_id=1796574471]
+position = Vector2(638, 364)
+scale = Vector2(2.0218751, 2.0218751)
+texture = ExtResource("1_4bo1f")
+
+[node name="UI" parent="." unique_id=890284133 instance=ExtResource("2_t6hq3")]
+
+[node name="BattleLogic" type="Node" parent="." unique_id=1136221329]
+script = ExtResource("3_w878y")
+music_name = "Kevin"
+
+[node name="player" parent="." unique_id=294404824 instance=ExtResource("4_4l37w")]
+position = Vector2(232, 291)
+
+[node name="enemies" type="Node2D" parent="." unique_id=1413379743]
+position = Vector2(835, 394)
+
+[node name="Me67" parent="enemies" unique_id=708042470 instance=ExtResource("5_kgh5h")]
+position = Vector2(198, -108)
+attacks_name = Array[String](["add_status_effect", "super_normal_attack", "low_iq", "super_normal_attack", "super_normal_attack"])
+setted_HP = 800.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemies/Me67" unique_id=1450351235]
+position = Vector2(14, -24)
+rotation = -0.005377153
+scale = Vector2(1.46875, 1.46875)
+sprite_frames = SubResource("SpriteFrames_gk2jk")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1824490579]
+
+[node name="Dialogue" type="Node" parent="." unique_id=276630500]
+script = ExtResource("7_ujw1h")
+at_when = 1
+dialogues = Array[ExtResource("8_7ddbm")]([SubResource("Resource_ayegc"), SubResource("Resource_xte1c"), SubResource("Resource_gk2jk"), SubResource("Resource_8xagh"), SubResource("Resource_rasdo"), SubResource("Resource_xvvvi"), SubResource("Resource_q4ehi"), SubResource("Resource_g0s7f")])
+
+[node name="Cone L" parent="." unique_id=1624172075 instance=ExtResource("5_kgh5h")]
+position = Vector2(798, 288)
+attacks_name = Array[String](["strong_right", "ice_cream_balls", "scratch", "strong_right", "block"])
+setted_HP = 400.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cone L" unique_id=1836675775]
+position = Vector2(14, -23)
+scale = Vector2(1.46875, 1.46875)
+sprite_frames = SubResource("SpriteFrames_w878y")

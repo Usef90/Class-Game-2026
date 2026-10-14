@@ -1,0 +1,215 @@
+[gd_scene format=3 uid="uid://drr3088qvw5dk"]
+
+[ext_resource type="Texture2D" uid="uid://cswy7u6a8b46h" path="res://Art/redflash.png" id="1_n5rqp"]
+[ext_resource type="Script" uid="uid://bme11j2i2ndyn" path="res://scripts/end_turn_button.gd" id="1_nltto"]
+[ext_resource type="Script" uid="uid://c4jtsd8b6ntsy" path="res://energy_display.gd" id="2_ibotj"]
+[ext_resource type="FontFile" path="res://fonts/kirifont/Kirifont.tres" id="2_waa4j"]
+[ext_resource type="PackedScene" uid="uid://balspnmwbb0nl" path="res://dialogue_manager/dialogues.tscn" id="3_n5ude"]
+[ext_resource type="StyleBox" uid="uid://bjncy0blgwv8n" path="res://hover.tres" id="4_irxef"]
+[ext_resource type="StyleBox" uid="uid://dk0m455vrnwhn" path="res://cool_colours.tres" id="4_n5rqp"]
+[ext_resource type="Script" uid="uid://b8mrb0agbnl4d" path="res://scenes/enemy_stuff_display.gd" id="4_y4yjw"]
+[ext_resource type="Script" uid="uid://cjg1n6ng1agfq" path="res://status_effect_viewer.gd" id="5_ibotj"]
+[ext_resource type="FontFile" uid="uid://bxrukl00n4uu7" path="res://fonts/montreal/Montreal-Regular.ttf" id="6_n5rqp"]
+[ext_resource type="FontFile" uid="uid://bqxpbabpowhdh" path="res://fonts/kirifont/KiriFont.ttf" id="6_y4yjw"]
+[ext_resource type="FontFile" uid="uid://11stbrnoqjdc" path="res://fonts/montreal/Montreal-Bold.ttf" id="12_n5rqp"]
+
+[sub_resource type="Animation" id="Animation_e2l4f"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_n5rqp"]
+resource_name = "flash"
+length = 1.9666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gs482"]
+_data = {
+&"RESET": SubResource("Animation_e2l4f"),
+&"flash": SubResource("Animation_n5rqp")
+}
+
+[node name="UI" type="CanvasLayer" unique_id=890284133]
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=432087091]
+visible = false
+modulate = Color(0.81, 0, 0.28349993, 0.6313726)
+offset_right = 1280.0
+offset_bottom = 719.0
+mouse_filter = 2
+texture = ExtResource("1_n5rqp")
+
+[node name="flash" type="AnimationPlayer" parent="." unique_id=391045815]
+libraries/ = SubResource("AnimationLibrary_gs482")
+
+[node name="cards" type="Control" parent="." unique_id=1847801732]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="end_turn_button" type="Button" parent="." unique_id=995316673]
+offset_left = 1090.0
+offset_top = 506.0
+offset_right = 1256.0
+offset_bottom = 701.0
+pivot_offset = Vector2(-583, 97)
+theme_override_fonts/font = ExtResource("2_waa4j")
+theme_override_styles/normal = ExtResource("4_n5rqp")
+theme_override_styles/pressed = ExtResource("4_irxef")
+theme_override_styles/hover = ExtResource("4_irxef")
+text = "end turn"
+script = ExtResource("1_nltto")
+
+[node name="play_testing_purpose" type="Button" parent="." unique_id=12553282]
+visible = false
+offset_left = 1097.0
+offset_top = 30.0
+offset_right = 1263.0
+offset_bottom = 225.0
+pivot_offset = Vector2(-583, 97)
+theme_override_fonts/font = ExtResource("2_waa4j")
+theme_override_styles/normal = ExtResource("4_n5rqp")
+theme_override_styles/pressed = ExtResource("4_irxef")
+theme_override_styles/hover = ExtResource("4_irxef")
+text = "DIE"
+
+[node name="energyBar" type="ProgressBar" parent="." unique_id=566822747]
+offset_left = 35.0
+offset_top = 23.0
+offset_right = 365.0
+offset_bottom = 67.0
+theme_override_styles/background = ExtResource("4_n5rqp")
+show_percentage = false
+
+[node name="energy_display" type="Label" parent="." unique_id=1572040183]
+anchors_preset = -1
+anchor_left = 0.07578125
+anchor_right = 0.07578125
+offset_left = 62.0
+offset_top = 31.0
+offset_right = 345.0
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("6_n5rqp")
+theme_override_font_sizes/font_size = 28
+text = "100"
+script = ExtResource("2_ibotj")
+
+[node name="dialogues" parent="." unique_id=702915050 instance=ExtResource("3_n5ude")]
+visible = false
+
+[node name="what did they even do" type="Label" parent="." unique_id=1227900970]
+offset_left = 426.0
+offset_top = 134.0
+offset_right = 862.0
+offset_bottom = 311.0
+theme_override_fonts/font = ExtResource("2_waa4j")
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 3
+script = ExtResource("4_y4yjw")
+
+[node name="victory" type="Panel" parent="." unique_id=1139407973]
+visible = false
+offset_left = 387.0
+offset_top = 107.0
+offset_right = 902.0
+offset_bottom = 634.0
+theme_override_styles/panel = ExtResource("4_n5rqp")
+
+[node name="Label" type="Label" parent="victory" unique_id=1004419997]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 22.0
+offset_right = 365.0
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("6_y4yjw")
+theme_override_font_sizes/font_size = 45
+text = "You won"
+
+[node name="stuff you gain" type="Label" parent="victory" unique_id=189636429]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 88.0
+offset_right = 453.0
+offset_bottom = 259.0
+theme_override_fonts/font = ExtResource("2_waa4j")
+theme_override_font_sizes/font_size = 41
+
+[node name="next" type="Button" parent="victory" unique_id=1523039113]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 421.0
+offset_right = 344.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("6_y4yjw")
+theme_override_font_sizes/font_size = 32
+text = "Level select"
+
+[node name="You won" type="Panel" parent="." unique_id=788358738]
+offset_left = 387.0
+offset_top = 107.0
+offset_right = 902.0
+offset_bottom = 634.0
+theme_override_styles/panel = ExtResource("4_n5rqp")
+
+[node name="Label" type="Label" parent="You won" unique_id=950008785]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 39.0
+offset_right = 495.0
+offset_bottom = 188.0
+theme_override_fonts/font = ExtResource("6_y4yjw")
+theme_override_font_sizes/font_size = 45
+text = "Thanks for playing this trash game"
+autowrap_mode = 3
+
+[node name="stuff you gain" type="Label" parent="You won" unique_id=1722036975]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 88.0
+offset_right = 453.0
+offset_bottom = 259.0
+theme_override_fonts/font = ExtResource("2_waa4j")
+theme_override_font_sizes/font_size = 41
+
+[node name="Ending cutscene" type="Button" parent="You won" unique_id=1547978358]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 421.0
+offset_right = 344.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("6_y4yjw")
+theme_override_font_sizes/font_size = 32
+text = "Ending"
+
+[node name="status_effect_viewer" type="Panel" parent="." unique_id=1061906474]
+visible = false
+offset_left = 58.0
+offset_top = 290.0
+offset_right = 362.0
+offset_bottom = 417.0
+script = ExtResource("5_ibotj")
+
+[node name="giga_label" type="Label" parent="status_effect_viewer" unique_id=2021094009]
+layout_mode = 0
+offset_right = 294.0
+offset_bottom = 122.0
+theme_override_fonts/font = ExtResource("12_n5rqp")
+theme_override_font_sizes/font_size = 28
+text = "this does "
+autowrap_mode = 3
+
+[connection signal="button_down" from="end_turn_button" to="end_turn_button" method="_on_button_down"]
+[connection signal="button_down" from="play_testing_purpose" to="end_turn_button" method="_on_play_testing_purpose_button_down"]
+[connection signal="button_down" from="victory/next" to="end_turn_button" method="_on_next_button_down"]
+[connection signal="button_down" from="You won/Ending cutscene" to="end_turn_button" method="_on_ending_cutscene_button_down"]

@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://balspnmwbb0nl"]
+
+[ext_resource type="Script" uid="uid://cuyin37pmsqux" path="res://dialogue_manager/dialogues.gd" id="1_5a3in"]
+[ext_resource type="FontFile" uid="uid://bqxpbabpowhdh" path="res://fonts/kirifont/KiriFont.ttf" id="2_l2rgw"]
+[ext_resource type="FontFile" uid="uid://11stbrnoqjdc" path="res://fonts/montreal/Montreal-Bold.ttf" id="2_o580v"]
+[ext_resource type="StyleBox" uid="uid://dk0m455vrnwhn" path="res://cool_colours.tres" id="3_o580v"]
+
+[node name="dialogues" type="Control" unique_id=702915050]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1283.0
+offset_bottom = 721.0
+script = ExtResource("1_5a3in")
+
+[node name="Name" type="RichTextLabel" parent="." unique_id=1137153328]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 319.0
+offset_right = 429.0
+offset_bottom = 364.0
+theme_override_fonts/normal_font = ExtResource("2_o580v")
+theme_override_font_sizes/normal_font_size = 25
+text = "test for "
+
+[node name="Panel" type="Panel" parent="." unique_id=571890078]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 362.0
+offset_right = 1281.0
+offset_bottom = 721.0
+theme_override_styles/panel = ExtResource("3_o580v")
+
+[node name="paragraph" type="RichTextLabel" parent="Panel" unique_id=649981370]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 27.0
+offset_right = 868.0
+offset_bottom = 335.0
+theme_override_fonts/normal_font = ExtResource("2_o580v")
+theme_override_font_sizes/normal_font_size = 25
+text = "test for "
+
+[node name="protraits" type="TextureRect" parent="." unique_id=431114709]
+modulate = Color(0.9401983, 0.9401984, 0.9401982, 1)
+texture_filter = 3
+layout_mode = 0
+offset_left = 762.0
+offset_top = 2.0
+offset_right = 1286.0
+offset_bottom = 722.2311
+expand_mode = 1
+
+[node name="Skip dialogue" type="Button" parent="." unique_id=482970343]
+layout_mode = 0
+offset_left = 1047.0
+offset_top = 634.0
+offset_right = 1266.0
+offset_bottom = 706.0
+theme_override_fonts/font = ExtResource("2_l2rgw")
+text = "Cut the yap vro
+"
+
+[connection signal="button_down" from="Skip dialogue" to="." method="_on_skip_dialogue_button_down"]

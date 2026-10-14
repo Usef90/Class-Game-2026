@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c2tfvqo788kxy"]
+
+[ext_resource type="Script" uid="uid://b1wwgji6jiwrq" path="res://attack_base_moves.gd" id="1_s8un3"]
+
+[node name="punch" type="Panel" unique_id=2040214685]
+offset_left = -72.0
+offset_top = -103.0
+offset_right = 75.0
+offset_bottom = 101.0
+script = ExtResource("1_s8un3")
+defensive = true
+damage = 25.0
+metadata/_custom_type_script = "uid://bn04f33qgscnx"
+
+[node name="name" type="Label" parent="." unique_id=1243870691]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 142.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1982351662]
+position = Vector2(71, 52)
+
+[node name="discription" type="Label" parent="." unique_id=1423348561]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 92.0
+offset_right = 145.0
+offset_bottom = 201.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

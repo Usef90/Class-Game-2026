@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cshpfenis4cs6"]
+
+[ext_resource type="Script" uid="uid://d4c12ggebe1bf" path="res://effects/effects.gd" id="1_7hurr"]
+
+[node name="super_block" type="Node" unique_id=800013498]
+script = ExtResource("1_7hurr")
+startInstantly = true
+effect_name = "ex_block"
+type = "buff"
+target_stats = "def_stats"
+duration = 1
+Effect_strength = 15.0
+discription = "block 75% of incoming attacks"

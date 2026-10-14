@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chhcxr8m6sw5a"
+path="res://.godot/imported/player dmagae.mp3-8442e3b72f10ccd1308b24d7baaee76f.mp3str"
+
+[deps]
+
+source_file="res://sfx/player dmagae.mp3"
+dest_files=["res://.godot/imported/player dmagae.mp3-8442e3b72f10ccd1308b24d7baaee76f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

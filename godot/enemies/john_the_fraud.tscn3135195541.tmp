@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ck6ewcnl8sg60"]
+
+[ext_resource type="Script" uid="uid://c4kqr3abi6wjh" path="res://scripts/enemy.gd" id="1_2sr7e"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://Art/icon.svg" id="2_kjryd"]
+[ext_resource type="PackedScene" uid="uid://bkiarse6ln4qp" path="res://enemy_stats.tscn" id="3_4ytir"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ytir"]
+size = Vector2(230, 163)
+
+[node name="John_the_fraud" type="Node2D" unique_id=708042470]
+script = ExtResource("1_2sr7e")
+attacks_name = Array[String](["kick", "punch"])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1828216997]
+texture = ExtResource("2_kjryd")
+
+[node name="enemy_stats" parent="." unique_id=1287744910 instance=ExtResource("3_4ytir")]
+
+[node name="touch_area" type="Area2D" parent="." unique_id=65239337]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="touch_area" unique_id=411885420]
+shape = SubResource("RectangleShape2D_4ytir")
+
+[connection signal="mouse_entered" from="touch_area" to="." method="_on_area_2d_mouse_entered"]

@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c78n0yfbk1p4q"]
+
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_fw8re"]
+[ext_resource type="Script" uid="uid://dnr14uiyajquj" path="res://scripts/battle_logic.gd" id="1_r5l0u"]
+[ext_resource type="Script" uid="uid://bn04f33qgscnx" path="res://base_for_cards.gd" id="1_sl17i"]
+[ext_resource type="Script" uid="uid://bme11j2i2ndyn" path="res://end_turn_button.gd" id="2_gf131"]
+[ext_resource type="Script" uid="uid://c4jtsd8b6ntsy" path="res://energy_display.gd" id="3_sl17i"]
+[ext_resource type="PackedScene" uid="uid://ck6ewcnl8sg60" path="res://enemies/john_the_fraud.tscn" id="4_5joda"]
+
+[node name="tutorial" type="Node2D" unique_id=1916832371]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=89355144]
+
+[node name="cards" type="Control" parent="UI" unique_id=901797189]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="attack_button" type="Button" parent="UI/cards" unique_id=2105450800]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 504.0
+offset_right = 495.0
+offset_bottom = 699.0
+text = "attack"
+script = ExtResource("1_sl17i")
+
+[node name="end_turn_button" type="Button" parent="UI" unique_id=1552152923]
+offset_left = 663.0
+offset_top = 503.0
+offset_right = 829.0
+offset_bottom = 698.0
+text = "attack"
+script = ExtResource("2_gf131")
+
+[node name="energy_display" type="Label" parent="UI" unique_id=1700585432]
+offset_left = 39.0
+offset_top = 34.0
+offset_right = 322.0
+offset_bottom = 111.0
+script = ExtResource("3_sl17i")
+
+[node name="BattleLogic" type="Node" parent="." unique_id=1136221329]
+script = ExtResource("1_r5l0u")
+
+[node name="player" parent="." unique_id=294404824 instance=ExtResource("1_fw8re")]
+position = Vector2(192, 400)
+
+[node name="enemies" type="Node2D" parent="." unique_id=1413379743]
+position = Vector2(835, 394)
+
+[node name="John_the_fraud" parent="enemies" unique_id=708042470 instance=ExtResource("4_5joda")]
+setted_speed = 20.0
+
+[connection signal="button_down" from="UI/cards/attack_button" to="UI/cards/attack_button" method="_on_button_down"]
+[connection signal="button_down" from="UI/end_turn_button" to="UI/end_turn_button" method="_on_button_down"]

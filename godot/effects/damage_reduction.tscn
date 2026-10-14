@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c1lpxvcgw30xi"]
+
+[ext_resource type="Script" uid="uid://d4c12ggebe1bf" path="res://effects/effects.gd" id="1_f8ynn"]
+
+[node name="damage_reduction" type="Node" unique_id=1390896184]
+script = ExtResource("1_f8ynn")
+startInstantly = true
+effect_name = "fatigue"
+type = "buff"
+target_stats = "damage_multiplier"
+duration = 3
+Effect_strength = 0.75
+discription = "reduce your attack power by 25% for 3 turns"

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bijm2c15v00ou"]
+
+[ext_resource type="Script" uid="uid://d4c12ggebe1bf" path="res://effects/effects.gd" id="1_754nw"]
+
+[node name="weaken" type="Node" unique_id=1780033163]
+script = ExtResource("1_754nw")
+startInstantly = true
+effect_name = "weaken"
+type = "buff"
+target_stats = "def_stats"
+duration = 3
+Effect_strength = -3.0
+discription = "defence reduce by 15% for 3 turns"

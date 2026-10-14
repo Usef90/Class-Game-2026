@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dglrimoild0an"]
+
+[ext_resource type="Script" uid="uid://djpecrs2843jt" path="res://effects_enemies/effect_enemies.gd" id="1_xnowp"]
+
+[node name="Burn" type="Node" unique_id=1751863362]
+script = ExtResource("1_xnowp")
+effect_name = "burn"
+damage = 5.0
+duration = 2
+discription = "5  damage  for a turn"

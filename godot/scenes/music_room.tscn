@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://di1xdohl1yucq"]
+
+[ext_resource type="Texture2D" uid="uid://fljhhb8q5smd" path="res://Art/gordoTitleScreen.png" id="1_lj3s5"]
+[ext_resource type="Script" uid="uid://r7t1po6x3fv2" path="res://scenes/music_room.gd" id="1_sdg5r"]
+[ext_resource type="PackedScene" uid="uid://ck7l3mylwuode" path="res://scenes/music_room_button.tscn" id="2_qt6lu"]
+
+[node name="Music Room" type="Node2D" unique_id=853949776]
+script = ExtResource("1_sdg5r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=896796035]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1961660611]
+offset_top = 2.0
+offset_right = 1293.6205
+offset_bottom = 720.0
+texture = ExtResource("1_lj3s5")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer" unique_id=219763972]
+offset_left = 246.0
+offset_top = 134.0
+offset_right = 1200.0
+offset_bottom = 697.0
+scroll_vertical_custom_step = 919.528
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ScrollContainer" unique_id=1167968309]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.75
+
+[node name="Button" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1620311084 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+music_name = "MainMenu"
+
+[node name="Button2" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=287091412 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "level select"
+music_name = "LevelSelect"
+
+[node name="Button3" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1089734122 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "kurger buns"
+music_name = "Battle"
+
+[node name="Button4" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1167115748 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "My Ragebait is absolute"
+music_name = "Boss1"
+
+[node name="Button5" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1205108329 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "FreeCandy"
+music_name = "FreeCandy"
+
+[node name="Button6" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=467058721 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "The larping of a country"
+music_name = "Untitled67"
+
+[node name="Button7" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1922791414 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "Kawaii cat boy"
+music_name = "Boss2(mangoMaybe)"
+
+[node name="Button8" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1211227403 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "the chicken butt"
+music_name = "zemonke"
+
+[node name="Button13" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1996490504 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "Musa Acuminata Bad67 remix. Original by Enda"
+music_name = "BananaLoreRemix"
+
+[node name="Button10" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1131521833 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "The bok Choi Farmer"
+music_name = "bok choi"
+
+[node name="Button12" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1307259739 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "It's worth the 5 bucks"
+music_name = "kallum"
+
+[node name="Button9" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1944898159 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "me67 incoming"
+music_name = "Kevin"
+
+[node name="Button14" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1214159816 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "Mango kinda phonk less
+"
+music_name = "FinalBossPleaseGiveInput"
+
+[node name="Button11" parent="CanvasLayer/ScrollContainer/VBoxContainer" unique_id=1385027937 instance=ExtResource("2_qt6lu")]
+layout_mode = 2
+text = "how did you die son"
+music_name = "death"
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1017678755]
+offset_left = 46.0
+offset_top = 618.0
+offset_right = 192.0
+offset_bottom = 690.0
+text = "Go back"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=209336233]
+offset_right = 762.0
+offset_bottom = 124.0
+theme_override_colors/default_color = Color(0.14044744, 0.14044744, 0.14044744, 1)
+theme_override_font_sizes/normal_font_size = 80
+text = "Music Room"
+
+[connection signal="button_down" from="CanvasLayer/Button" to="." method="_on_button_button_down"]

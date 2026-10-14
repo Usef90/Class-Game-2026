@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cmc6rvlg757io"]
+
+[sub_resource type="GDScript" id="GDScript_exoo7"]
+script/source = "extends Area2D
+
+@export var single: bool = false
+
+
+
+func _on_mouse_entered() -> void:
+	Events.emit_signal(\"in_attack_area\")
+
+
+func _on_mouse_exited() -> void:
+	Events.emit_signal(\"out_attack_area\")
+"
+
+[node name="attack_enemy_area" type="Area2D" unique_id=1306510231]
+script = SubResource("GDScript_exoo7")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

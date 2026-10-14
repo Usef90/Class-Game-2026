@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bh1ugthxxvja7"]
+
+[ext_resource type="Script" uid="uid://djpecrs2843jt" path="res://effects_enemies/effect_enemies.gd" id="1_7ndtd"]
+
+[node name="radiation" type="Node" unique_id=289820757]
+script = ExtResource("1_7ndtd")
+effect_name = "radiation"
+damage = 10.0
+duration = 3
+discription = "do 10 damage for 3 turns"

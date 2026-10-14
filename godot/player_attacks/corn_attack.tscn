@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://brwdiqo720bhq"]
+
+[ext_resource type="Texture2D" uid="uid://qju8bivensgw" path="res://Art/CardTemplateTuff.png" id="1_q548j"]
+[ext_resource type="Script" uid="uid://b1wwgji6jiwrq" path="res://cards.gd" id="2_q548j"]
+[ext_resource type="Texture2D" uid="uid://fmhngegudpw0" path="res://Art/Cornball(card).png" id="3_q548j"]
+
+[node name="corn_attack" type="TextureRect" unique_id=95620961]
+offset_left = -72.0
+offset_top = -103.0
+offset_right = 75.0
+offset_bottom = 101.0
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("1_q548j")
+script = ExtResource("2_q548j")
+card_name = "corn attack"
+discription = ""
+damage = 15.0
+effects_for_enemies = Array[String](["burn"])
+AOE = true
+
+[node name="name2" type="Label" parent="." unique_id=240421317]
+layout_mode = 0
+offset_left = 78.57143
+offset_top = 24.999994
+offset_right = 278.5714
+offset_bottom = 64.99999
+theme_override_font_sizes/font_size = 21
+text = "Cornball"
+
+[node name="Sprite2D2" type="TextureRect" parent="." unique_id=2135361418]
+layout_mode = 0
+offset_top = -1.499999
+offset_right = 250.0
+offset_bottom = 348.5
+texture = ExtResource("3_q548j")
+
+[node name="discription2" type="Label" parent="." unique_id=161146584]
+layout_mode = 0
+offset_left = 21.42857
+offset_top = 183.92857
+offset_right = 234.42857
+offset_bottom = 310.9286
+text = "applies burn 
+and does 15 Aoe
+"
+
+[node name="Label" type="Label" parent="." unique_id=1843147056]
+layout_mode = 0
+offset_left = -3.5714254
+offset_top = -10.714285
+offset_right = 42.428574
+offset_bottom = 102.28571
+theme_override_font_sizes/font_size = 40
+text = "10
+"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

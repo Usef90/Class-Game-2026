@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://by3ty148jrvke"]
+
+[ext_resource type="Texture2D" uid="uid://qju8bivensgw" path="res://Art/CardTemplateTuff.png" id="1_tnwh0"]
+[ext_resource type="Script" uid="uid://b1wwgji6jiwrq" path="res://cards.gd" id="2_86eg4"]
+[ext_resource type="Texture2D" uid="uid://1yorap4o5hhe" path="res://Art/Frying_pan(_card).png" id="3_86eg4"]
+
+[node name="steel_sword" type="TextureRect" unique_id=95620961]
+offset_left = -72.0
+offset_top = -103.0
+offset_right = 75.0
+offset_bottom = 101.0
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("1_tnwh0")
+script = ExtResource("2_86eg4")
+card_name = "Frying Pan"
+discription = "do 13  damage"
+damage = 13.0
+energy = 6.0
+AOE = true
+
+[node name="Sprite2D2" type="TextureRect" parent="." unique_id=518539219]
+layout_mode = 0
+offset_top = -1.499999
+offset_right = 250.0
+offset_bottom = 348.5
+texture = ExtResource("3_86eg4")
+
+[node name="name2" type="Label" parent="." unique_id=1448834063]
+layout_mode = 0
+offset_left = 64.28571
+offset_top = 26.785715
+offset_right = 264.2857
+offset_bottom = 66.78571
+theme_override_font_sizes/font_size = 21
+text = "Frying Pan"
+
+[node name="discription2" type="Label" parent="." unique_id=2007387761]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 184.50002
+offset_right = 231.0
+offset_bottom = 302.5
+text = "do 13  Aoe damage"
+
+[node name="Label" type="Label" parent="." unique_id=1102381502]
+layout_mode = 0
+offset_left = 8.928574
+offset_top = -10.714285
+offset_right = 208.92857
+offset_bottom = 44.285713
+theme_override_font_sizes/font_size = 40
+text = "6
+"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

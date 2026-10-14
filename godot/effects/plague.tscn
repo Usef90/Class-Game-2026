@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cxxopyvamg56s"]
+
+[ext_resource type="Script" uid="uid://d4c12ggebe1bf" path="res://effects/effects.gd" id="1_ynrjv"]
+
+[node name="virus" type="Node" unique_id=742750699]
+script = ExtResource("1_ynrjv")
+effect_name = "virus"
+stackable = true
+damage = 10.0
+discription = "does 10 damage over 5 turns"

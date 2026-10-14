@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://86q275l1hhq0"]
+
+[ext_resource type="Script" uid="uid://w1rd75tw6ylc" path="res://ShopStuff/shop_scene.gd" id="1_xduvy"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://Art/icon.svg" id="2_2e6ro"]
+[ext_resource type="Script" uid="uid://u4ks6kn82y6w" path="res://Upgrades/pack_opening_scene.gd" id="4_g0e1r"]
+
+[node name="ShopScene" type="Control" unique_id=1164084992]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xduvy")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=174240686]
+layout_mode = 0
+offset_left = 1.9999999
+offset_right = 130.0
+offset_bottom = 128.0
+scale = Vector2(10.017863, 5.535115)
+texture = ExtResource("2_2e6ro")
+
+[node name="TopFridge" type="HBoxContainer" parent="." unique_id=1223026909]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.94400007
+offset_left = 579.0
+offset_top = 92.0
+offset_right = -551.0
+offset_bottom = -387.68005
+grow_horizontal = 2
+theme_override_constants/separation = 144
+
+[node name="BottomFridge" type="HBoxContainer" parent="." unique_id=1123443060]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 467.0
+offset_right = 883.0
+offset_bottom = 667.0
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="ShopUI" type="CanvasLayer" parent="." unique_id=951023335]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1043101220]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 61.0
+offset_top = 195.0
+offset_right = -1120.0
+offset_bottom = -301.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MoneyCounter" type="HBoxContainer" parent="MarginContainer" unique_id=1445721253]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="MoneyIcon" type="TextureRect" parent="MarginContainer/MoneyCounter" unique_id=665169474]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_2e6ro")
+expand_mode = 1
+flip_v = true
+
+[node name="MoneyText" type="Label" parent="MarginContainer/MoneyCounter" unique_id=295939724]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "$25"
+
+[node name="ActionMenu" type="VBoxContainer" parent="MarginContainer" unique_id=144736176]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 15
+
+[node name="NextStage" type="Button" parent="MarginContainer/ActionMenu" unique_id=1862821819]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Next"
+
+[node name="Reroll" type="Button" parent="MarginContainer/ActionMenu" unique_id=978897667]
+layout_mode = 2
+text = "Reroll $5"
+
+[node name="PackOpeningScene" type="Control" parent="." unique_id=1239548219]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("4_g0e1r")
+
+[node name="ColorRect" type="ColorRect" parent="PackOpeningScene" unique_id=382254934]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PackOpeningScene" unique_id=1875295382]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PackTitleLabel" type="Label" parent="PackOpeningScene/VBoxContainer" unique_id=1706572128]
+layout_mode = 2
+
+[node name="ChoicesContainer" type="HBoxContainer" parent="PackOpeningScene/VBoxContainer" unique_id=946267138]
+layout_mode = 2

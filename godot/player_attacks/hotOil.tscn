@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://4pplrkktlym"]
+
+[ext_resource type="Texture2D" uid="uid://qju8bivensgw" path="res://Art/CardTemplateTuff.png" id="1_huwhf"]
+[ext_resource type="Script" uid="uid://b1wwgji6jiwrq" path="res://cards.gd" id="2_73dsv"]
+[ext_resource type="Texture2D" uid="uid://bcvw8fgg87ykj" path="res://Art/Hot_Oil(no_card).png" id="3_huwhf"]
+
+[node name="Hot_oil" type="TextureRect" unique_id=95620961]
+offset_left = -72.0
+offset_top = -107.0
+offset_right = 178.0
+offset_bottom = 243.0
+scale = Vector2(0.5706078, 0.5706078)
+texture = ExtResource("1_huwhf")
+script = ExtResource("2_73dsv")
+card_name = "Aura Farm"
+discription = ""
+damage = 35.0
+energy = 15.0
+lucky = true
+
+[node name="name" type="Label" parent="." unique_id=1243870691]
+layout_mode = 0
+offset_left = 80.61579
+offset_top = 29.79279
+offset_right = 280.61578
+offset_bottom = 69.792786
+theme_override_font_sizes/font_size = 21
+text = "HOT OIL"
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=1145997083]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 249.0
+offset_bottom = 351.0
+texture = ExtResource("3_huwhf")
+
+[node name="discription" type="Label" parent="." unique_id=1423348561]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 187.0
+offset_right = 230.0
+offset_bottom = 305.0
+text = "Do 35 damage but sometimes you can get damaged (80% with no luck stats)
+"
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=2130168746]
+layout_mode = 0
+offset_left = 8.76259
+offset_top = -8.762587
+offset_right = 208.76259
+offset_bottom = 46.23741
+theme_override_font_sizes/font_size = 40
+text = "15"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

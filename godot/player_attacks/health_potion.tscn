@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://wex5hmsarmin"]
+
+[ext_resource type="Texture2D" uid="uid://qju8bivensgw" path="res://Art/CardTemplateTuff.png" id="1_fyqss"]
+[ext_resource type="Script" uid="uid://b1wwgji6jiwrq" path="res://cards.gd" id="2_fyqss"]
+[ext_resource type="Texture2D" uid="uid://b232v1wtr8dxx" path="res://Art/Heal(Notcard).png" id="3_fyqss"]
+
+[node name="health_potion" type="TextureRect" unique_id=95620961]
+offset_left = -69.00001
+offset_top = -107.0
+offset_right = 181.0
+offset_bottom = 243.0
+scale = Vector2(0.5600004, 0.5600004)
+texture = ExtResource("1_fyqss")
+script = ExtResource("2_fyqss")
+card_name = "Science"
+discription = "heal 20 hp
+"
+damage = 0.0
+energy = 9.0
+effects = Array[String](["heal"])
+AOE = true
+
+[node name="name2" type="Label" parent="." unique_id=1575860363]
+layout_mode = 0
+offset_left = 103.571365
+offset_top = 28.571405
+offset_right = 303.57135
+offset_bottom = 68.5714
+theme_override_font_sizes/font_size = 21
+text = "RCT"
+
+[node name="Sprite2D2" type="TextureRect" parent="." unique_id=398262324]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 2.0
+offset_right = 247.0
+offset_bottom = 352.0
+texture = ExtResource("3_fyqss")
+
+[node name="discription2" type="Label" parent="." unique_id=1953087887]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 188.0
+offset_right = 228.0
+offset_bottom = 306.0
+text = "heal 20 hp"
+
+[node name="Label" type="Label" parent="." unique_id=736985856]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -9.0
+offset_right = 207.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 40
+text = "9"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

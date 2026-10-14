@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://br4y3ad61jtrm"]
+
+[ext_resource type="Script" uid="uid://deoewep6mpf6g" path="res://minigames/black_flash/black_flash_minigame.gd" id="1_mg"]
+[ext_resource type="Texture2D" uid="uid://fljhhb8q5smd" path="res://Art/gordoTitleScreen.png" id="2_hm8h7"]
+[ext_resource type="AudioStream" uid="uid://xljwbopnnlem" path="res://minigames/black_flash/peaksinging.mp3" id="3_hm8h7"]
+
+[node name="BlackFlashMinigame" type="Node2D" unique_id=264310077]
+script = ExtResource("1_mg")
+approach_time = 2.5
+perfect_window = 0.05
+good_window = 0.12
+max_duration = 151.0
+reaction_speed = 3.0
+autostart_for_testing = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=1506018864]
+modulate = Color(0.28778407, 0.28778407, 0.28778407, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource("2_hm8h7")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=75902913]
+stream = ExtResource("3_hm8h7")

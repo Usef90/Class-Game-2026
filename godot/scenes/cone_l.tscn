@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://b2sxwi1q7pvsb"]
+
+[ext_resource type="Texture2D" uid="uid://b88k0skjwetnw" path="res://Art/cone.png" id="1_7wowf"]
+[ext_resource type="Script" uid="uid://dnr14uiyajquj" path="res://scripts/battle_logic.gd" id="2_ofqtu"]
+[ext_resource type="PackedScene" uid="uid://drr3088qvw5dk" path="res://ui.tscn" id="3_k213a"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="4_7wowf"]
+[ext_resource type="PackedScene" uid="uid://ck6ewcnl8sg60" path="res://enemies/enemy.tscn" id="5_32sd0"]
+[ext_resource type="Texture2D" uid="uid://dbn20ahdfwck3" path="res://Art/coneLTest.png" id="6_7wowf"]
+[ext_resource type="Script" uid="uid://cpukq3r6546by" path="res://dialogue_manger.gd" id="7_nx32a"]
+[ext_resource type="Script" uid="uid://buclel82cppmv" path="res://scripts/dialogue_entry.gd" id="8_ofqtu"]
+[ext_resource type="Texture2D" uid="uid://dvwvvk6g07p7c" path="res://Art/coneL.png" id="9_7wowf"]
+[ext_resource type="Texture2D" uid="uid://ckmir275cyots" path="res://Art/gordoRAM.png" id="10_32sd0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32sd0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_7wowf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_2lm43"]
+script = ExtResource("8_ofqtu")
+character_name = "Gordo RamE"
+portrait = ExtResource("10_32sd0")
+paragraphs = "Mate, what am I looking at?"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_k213a"]
+script = ExtResource("8_ofqtu")
+character_name = "Cone L"
+portrait = ExtResource("9_7wowf")
+paragraphs = "I'm broke so I have to put on cat ears to make more moewey"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_7wowf"]
+script = ExtResource("8_ofqtu")
+character_name = "Gordo RamE"
+portrait = ExtResource("10_32sd0")
+paragraphs = "utter cap, I know you love wearing cat ears. However I can not support this statement. 
+
+"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_nx32a"]
+script = ExtResource("8_ofqtu")
+character_name = "ConeL"
+portrait = ExtResource("9_7wowf")
+paragraphs = "Ok fatty"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_32sd0"]
+script = ExtResource("8_ofqtu")
+character_name = "ConeL"
+portrait = ExtResource("9_7wowf")
+paragraphs = "You want an ice cream or not."
+music = "Lastminutechange"
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[sub_resource type="Resource" id="Resource_yucst"]
+script = ExtResource("8_ofqtu")
+character_name = "Gordo RamE"
+portrait = ExtResource("10_32sd0")
+paragraphs = "Mate, don't change the subject. You ought that I would not notice. Sneaky."
+metadata/_custom_type_script = "uid://buclel82cppmv"
+
+[node name="ConeL" type="Node2D" unique_id=1916832371]
+
+[node name="background" type="Sprite2D" parent="." unique_id=1824490579]
+position = Vector2(640.3333, 361.5)
+scale = Vector2(1.9916666, 1.9916667)
+texture = ExtResource("1_7wowf")
+
+[node name="BattleLogic" type="Node" parent="." unique_id=1136221329]
+script = ExtResource("2_ofqtu")
+music_name = "Lastminutechange"
+total_enemies = 3
+victory_gold = 30
+achievement_will_gain = "ConeL"
+
+[node name="UI" parent="." unique_id=890284133 instance=ExtResource("3_k213a")]
+
+[node name="player" parent="." unique_id=294404824 instance=ExtResource("4_7wowf")]
+position = Vector2(218, 387)
+
+[node name="enemies" type="Node2D" parent="." unique_id=1413379743]
+position = Vector2(829, 368)
+
+[node name="Cone L" parent="enemies" unique_id=1564538628 instance=ExtResource("5_32sd0")]
+position = Vector2(-7, 5)
+attacks_name = Array[String](["strong_right", "ice_cream_balls", "scratch", "strong_right"])
+setted_HP = 400.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemies/Cone L" unique_id=1328646470]
+position = Vector2(14, -23)
+scale = Vector2(1.46875, 1.46875)
+sprite_frames = SubResource("SpriteFrames_32sd0")
+
+[node name="Dialogue" type="Node" parent="." unique_id=276630500]
+script = ExtResource("7_nx32a")
+at_when = 1
+dialogues = Array[ExtResource("8_ofqtu")]([SubResource("Resource_2lm43"), SubResource("Resource_k213a"), SubResource("Resource_7wowf"), SubResource("Resource_nx32a"), SubResource("Resource_32sd0"), SubResource("Resource_yucst")])

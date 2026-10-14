@@ -1,5 +1,9 @@
 extends Node
 
+## The script in the main battle scene. 
+## Handles the state of the current battles
+## Check the current victory conditions  and stuff
+
 var current_turn: int = 0
 
 var enemy_id_turn: int = 0
@@ -29,6 +33,7 @@ var ending: Panel
 
 var card_choice: int = 0
 
+
 func _ready() -> void:
 	AudioManager.play(music_name)
 	for i in PlayerStats.attacks:
@@ -38,6 +43,7 @@ func _ready() -> void:
 	card_list.child_order_changed.connect(_update_card_ids)
 	num_of_cards = card_list.get_child_count()
 	var children = $"../enemies".get_children()
+	# giving enemies some unique ids
 	for index in range(children.size()):
 		num_of_enemies += 1
 		children[index].id = index
@@ -52,6 +58,7 @@ func _ready() -> void:
 	Events.connect("attack_id", _spawn_attack_choice)
 	
 	_players_turn()
+
 func _dialogue():
 	current_state = States.dialogue
 	
@@ -59,15 +66,18 @@ func _dialogue():
 func _spawn_attack_choice():
 	var choice = _spawn_attack_choice
 
+# player turn 
+# removes the hand and just add 6 more new cards
 func _players_turn():
 	current_state = States.players_turn
 	current_turn += 1
 	num_of_cards = card_list.get_child_count()
+	
 	for i in card_list.get_children():
 		i.queue_free()
 	
 	for i in range(MAX_CARDS):
-		# Increment and automatically wrap around array size
+
 		card_choice = (card_choice + 1) % cards_can_spawn.size()
 		
 		var card_key = cards_can_spawn[card_choice]
@@ -78,18 +88,20 @@ func _players_turn():
 			new_card.card_id = i
 			card_list.add_child(new_card)
 		
-		# Update all IDs sequentially now that the hand is full
 	
 	
 	get_parent().get_node("player").get_node("player_stats").get_node("HP").value += PlayerStats.player_hitpoint_recovery
 	get_parent().get_node("player").get_node("player_stats").get_node("Label").text = str(int(get_parent().get_node("player").get_node("player_stats").get_node("HP").value)) + "/" +str(int(get_parent().get_node("player").get_node("player_stats").get_node("HP").max_value))
 
-# Cleaned-up sequential ID assignment function
+# clean up the id of the cards
 func _update_card_ids() -> void:
 	var children = card_list.get_children()
 	num_of_cards = children.size()
 	for index in range(children.size()):
 		children[index].card_id = index
+		
+# enemy turn
+# set the statemachine to the enemy's turn
 func _enemies_turn():
 	
 	current_state = States.enemies_turn
@@ -98,7 +110,7 @@ func _enemies_turn():
 func _process(_delta: float) -> void:
 	_check_victory()
 func _check_victory():
-	
+	# check if zero enemies are in the scene and show the vicotry scene
 	if enemy_list.get_child_count()  == 0 and !victory and !ending_of_story:
 		Globals.achievements[achievement_will_gain] = true
 		victory = true

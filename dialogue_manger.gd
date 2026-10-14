@@ -1,6 +1,7 @@
 extends Node
 
-
+## dialogue event 
+## if the num of turns == at_when it starts the dialogue
 
 @export var at_when:int = 0 #in turns if it isn't obvious
 @export var dialogues: Array[DialogueEntry] = []

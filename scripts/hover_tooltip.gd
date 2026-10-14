@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+## Kallum coded but this is the shop item viewer
+## so I don't know it mostly does
 
 var panel: PanelContainer
 var title_label: Label

@@ -1,5 +1,7 @@
 extends Control
 
+## idfk the upgrade animations i think
+
 # Signal emitted when the player successfully chooses an upgrade
 signal item_chosen(item_data: Dictionary)
 

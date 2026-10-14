@@ -1,5 +1,7 @@
 extends Button
 
+## end turn hander
+
 var animation_playing: bool = false
 
 var enemy_id_turn: int
@@ -7,6 +9,7 @@ var enemy_id_turn: int
 var battle_logic_script: Node
 var enemy_list: Node2D
 var total_enemies: int
+
 
 func _ready() -> void:
 	battle_logic_script = $"../../BattleLogic"
@@ -17,6 +20,8 @@ func _ready() -> void:
 	Events.connect("damaged_player", playing_animation)
 	Events.connect("players_turn", stop_animation)
 	$"../You won".visible = false
+	
+# this prevents the player to end turn during the enemy attack animations
 func playing_animation():
 	animation_playing = true
 
@@ -40,7 +45,7 @@ func _on_button_down() -> void:
 	Events.emit_signal("enemies_turn", enemy_id_turn)
 
 	
-
+# buttons connections that I connected to this script cuz
 
 func _on_next_button_down() -> void:
 	TransitionManager.play_transition("res://scenes/level_select.tscn")

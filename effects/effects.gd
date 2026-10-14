@@ -1,9 +1,33 @@
-extends effects_base
+extends Node
+
+## status effect script
+## like make a new node with this script 
+## and change the stuff in the editor to make a new side effect
+
+
+class_name effects_base
+
+
+var types_of_effect = ["lethal", "buff"]
+
+
+@export var effect_name = ""
+
+@export var stackable: bool = false
+
+@export var type = "lethal"
+@export var damage: float
+@export var target_stats: String = ""
+@export var duration: int = 5
+@export var Effect_strength: float = 1.2
+
+@export_multiline var discription: String = ""
 
 var player_ingame_stats: Node2D
 var before_stats: float
 
 @export var startInstantly: bool = false
+
 
 func _ready() -> void:
 	player_ingame_stats = get_parent().get_parent().get_node("player_stats")
@@ -17,6 +41,9 @@ func _ready() -> void:
 	icon.text = discription
 	get_parent().get_parent().get_node("status_effect_viewer").add_child(icon, true)
 	get_parent().effect.append(effect_name)
+	# type_of_effects[0] == lethal
+	# typpe_of_effects[1] == buff
+	
 	if type == types_of_effect[1]:
 		before_stats = player_ingame_stats.get(target_stats)
 		duration += 1
@@ -26,6 +53,7 @@ func _ready() -> void:
 	
 	
 
+# called every turn
 
 func _take_effect():
 	if type == types_of_effect[0] and duration  > 0:

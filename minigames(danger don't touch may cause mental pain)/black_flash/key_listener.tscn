@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene format=3]
 
-[ext_resource type="Texture2D" path="res://minigames/black_flash/art/arrows.webp" id="1_2gc7i"]
-[ext_resource type="Script" path="res://minigames/black_flash/key_listener.gd" id="2_lfl67"]
+[ext_resource type="Texture2D" uid="uid://c8sd7wlk0l8pg" path="res://minigames(danger don't touch may cause mental pain)/black_flash/art/arrows.webp" id="1_2gc7i"]
+[ext_resource type="Script" uid="uid://bopwsivqbyani" path="res://minigames(danger don't touch may cause mental pain)/black_flash/key_listener.gd" id="2_lfl67"]
 
 [sub_resource type="Animation" id="Animation_bwb8k"]
 length = 0.001

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://br4y3ad61jtrm"]
 
-[ext_resource type="Script" uid="uid://deoewep6mpf6g" path="res://minigames/black_flash/black_flash_minigame.gd" id="1_mg"]
+[ext_resource type="Script" uid="uid://deoewep6mpf6g" path="res://minigames(danger don't touch may cause mental pain)/black_flash/black_flash_minigame.gd" id="1_mg"]
 [ext_resource type="Texture2D" uid="uid://fljhhb8q5smd" path="res://Art/gordoTitleScreen.png" id="2_hm8h7"]
-[ext_resource type="AudioStream" uid="uid://xljwbopnnlem" path="res://minigames/black_flash/peaksinging.mp3" id="3_hm8h7"]
+[ext_resource type="AudioStream" uid="uid://xljwbopnnlem" path="res://minigames(danger don't touch may cause mental pain)/black_flash/peaksinging.mp3" id="3_hm8h7"]
 
 [node name="BlackFlashMinigame" type="Node2D" unique_id=264310077]
 script = ExtResource("1_mg")

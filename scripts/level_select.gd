@@ -1,5 +1,9 @@
 extends Control
 
+## might be totally useless
+## going to rewrite everything here
+## leave it here cuz idk if i would be useful anyways
+
 @onready var top_scroll = $TopScrollContainer
 @onready var map_scroll = $MapScrollContainer
 @onready var hbox = $TopScrollContainer/HBoxContainer
@@ -80,6 +84,7 @@ var level_preview_data: Dictionary = {
 	}
 }
 
+# king of brute force -> me
 func _player_stats_change():
 	PlayerStats.player_hitpoint = 100
 	PlayerStats.luck = 20

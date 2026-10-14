@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://j1mqqbkjjkbx"
-path="res://.godot/imported/Atop-R99O3.ttf-401f3242fdcbe2586a693610a6ee997e.fontdata"
+path="res://.godot/imported/Atop-R99O3.ttf-0e1570ff58f2fd32c0070b7f19ed3064.fontdata"
 
 [deps]
 
-source_file="res://minigames/black_flash/art/Atop-R99O3.ttf"
-dest_files=["res://.godot/imported/Atop-R99O3.ttf-401f3242fdcbe2586a693610a6ee997e.fontdata"]
+source_file="res://minigames(danger don't touch may cause mental pain)/black_flash/art/Atop-R99O3.ttf"
+dest_files=["res://.godot/imported/Atop-R99O3.ttf-0e1570ff58f2fd32c0070b7f19ed3064.fontdata"]
 
 [params]
 

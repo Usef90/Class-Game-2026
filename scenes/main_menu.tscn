@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0k5838nc0vb5"]
 
 [ext_resource type="Texture2D" uid="uid://fljhhb8q5smd" path="res://Art/gordoTitleScreen.png" id="2_bqqt6"]
-[ext_resource type="Script" uid="uid://b6udiq5bu4apv" path="res://scenes/button.gd" id="2_ekxnf"]
+[ext_resource type="Script" uid="uid://b6udiq5bu4apv" path="res://scenes/mainmenureal.gd" id="2_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://c6bc7db3tdg4d" path="res://Art/title.png" id="3_8ln24"]
 [ext_resource type="StyleBox" uid="uid://dvrqw8rhluaai" path="res://level_buttons.tres" id="3_wu84c"]
 [ext_resource type="StyleBox" uid="uid://bjncy0blgwv8n" path="res://hover.tres" id="4_8ln24"]
@@ -46,16 +46,6 @@ theme_override_styles/pressed = ExtResource("4_8ln24")
 theme_override_styles/hover = ExtResource("4_8ln24")
 text = "Continue"
 
-[node name="new game" type="Button" parent="CanvasLayer" unique_id=151820136]
-offset_left = 59.0
-offset_top = 322.0
-offset_right = 446.8069
-offset_bottom = 394.0
-theme_override_styles/normal = ExtResource("3_wu84c")
-theme_override_styles/pressed = ExtResource("4_8ln24")
-theme_override_styles/hover = ExtResource("4_8ln24")
-text = "New game"
-
 [node name="achievements" type="Button" parent="CanvasLayer" unique_id=869793619]
 offset_left = 1116.0
 offset_top = 618.0
@@ -91,7 +81,6 @@ wait_time = 9.0
 autostart = true
 
 [connection signal="pressed" from="CanvasLayer/continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="CanvasLayer/new game" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/achievements" to="." method="_on_achievements_pressed"]
 [connection signal="button_down" from="CanvasLayer/Button2" to="." method="_on_button_2_button_down"]
 [connection signal="button_down" from="CanvasLayer/Button3" to="." method="_on_button_3_button_down"]

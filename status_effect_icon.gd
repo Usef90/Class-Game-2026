@@ -1,5 +1,8 @@
 extends TextureRect
 
+## status effect icon
+## may not need to be fixed
+
 class_name status_effect_icon
 
 var text = ""

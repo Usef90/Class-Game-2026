@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8sd7wlk0l8pg"
-path="res://.godot/imported/arrows.webp-34a1eac9aed8c434b3bda48140f2e606.ctex"
+uid="uid://vr17y8p8vs0n"
+path="res://.godot/imported/fetch origin.png-8be6898d7767f3bb3e6741f85b95438d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/black_flash/art/arrows.webp"
-dest_files=["res://.godot/imported/arrows.webp-34a1eac9aed8c434b3bda48140f2e606.ctex"]
+source_file="res://README images/fetch origin.png"
+dest_files=["res://.godot/imported/fetch origin.png-8be6898d7767f3bb3e6741f85b95438d.ctex"]
 
 [params]
 

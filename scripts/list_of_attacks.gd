@@ -1,6 +1,7 @@
 extends Node
 
-#wtf
+#
+## all the enemy attacks their data and stuff
 
 var punch = {
 	"name": "punch",

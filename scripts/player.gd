@@ -1,6 +1,6 @@
 extends Node2D
 
-
+## totally useless script only for visuals so can delete
 
 
 var passives = []

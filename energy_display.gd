@@ -1,9 +1,12 @@
 extends Label
 
+## manages most of the energy
+
 var max_energy: float
 
 var total_energy: float
-var total_regeneration: float
+var total_regeneration: float # does not change stuff
+# have to change it in the player global
 
 func _ready() -> void:
 	$"../flash".play("RESET")

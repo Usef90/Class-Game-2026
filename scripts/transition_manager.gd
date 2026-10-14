@@ -1,5 +1,9 @@
 extends CanvasLayer
 
+## kallum's code i don't know how it works but it is the transition manager
+## so replace every transitionmanger.play_transition(example) with the defalt 
+## get_tree().change_scene_to_node
+
 @onready var cut_in: Control = $CutIn
 @onready var background: TextureRect = $CutIn/Background
 @onready var flash: ColorRect = $CutIn/Flash
